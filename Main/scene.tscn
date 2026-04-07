@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://crlk7xlw1276y"]
 
+[ext_resource type="Script" uid="uid://bbasja4qsk1tl" path="res://Main/Scripts/sprite_2d.gd" id="1_cga1c"]
+
 [node name="Scene" type="Node2D" unique_id=795415872]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=923642739]
 position = Vector2(576, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112055842]
+script = ExtResource("1_cga1c")
