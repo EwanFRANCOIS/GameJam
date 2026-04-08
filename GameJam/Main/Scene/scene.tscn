@@ -1,10 +1,78 @@
 [gd_scene format=3 uid="uid://b4e7wb127e4go"]
 
-[ext_resource type="Script" uid="uid://ycmuqryn6x2p" path="res://Main/Scripts/new_script.gd" id="1_1wjmr"]
-[ext_resource type="Script" uid="uid://nea1clj4lgfa" path="res://Main/Scene/sprite_2d.gd" id="2_63ixx"]
+[ext_resource type="Script" uid="uid://ycmuqryn6x2p" path="res://Main/Script/new_script.gd" id="1_1wjmr"]
+[ext_resource type="Script" uid="uid://bskame4bjctgf" path="res://Main/Scene/main_perso.gd" id="2_63ixx"]
+[ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="3_cokcd"]
+[ext_resource type="Texture2D" uid="uid://be0knf8kfap3l" path="res://Main/Textures/nina.png" id="4_2irwo"]
+[ext_resource type="Texture2D" uid="uid://4gnsxli7s54s" path="res://Main/Textures/banana.jpeg" id="4_uuoi2"]
+[ext_resource type="Texture2D" uid="uid://bw41fhchojxvq" path="res://Main/Textures/cookie.jpeg" id="5_1rlo3"]
+[ext_resource type="Texture2D" uid="uid://5r11fhw58tvb" path="res://Main/Textures/ewan.png" id="6_yma8a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63ixx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cokcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2irwo")
+}],
+"loop": true,
+"name": &"downW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cokcd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cokcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1rlo3")
+}],
+"loop": true,
+"name": &"leftW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cokcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uuoi2")
+}],
+"loop": true,
+"name": &"rightW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cokcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yma8a")
+}],
+"loop": true,
+"name": &"upW",
+"speed": 5.0
+}]
 
 [node name="Scene" type="Node2D" unique_id=686424288]
 script = ExtResource("1_1wjmr")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1571470650]
+[node name="MainPerso" type="CharacterBody2D" parent="." unique_id=1589632525]
 script = ExtResource("2_63ixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPerso" unique_id=1465677659]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainPerso" unique_id=1129911304]
+sprite_frames = SubResource("SpriteFrames_63ixx")
+animation = &"downW"
+
+[connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]
