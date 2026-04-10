@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775633991
+::res://::1775821451
 ::res://Main/::1775633991
-::res://Main/Scene/::1775640007
+::res://Main/Scene/::1775642437
 main_perso.gd::GDScript::3670485331195432349::1775639822::0::1::::<>CharacterBody2D<><>0<>0<><>::
-scene.tscn::PackedScene::4432136985404688974::1775640007::0::1::::<><><>0<>0<><>::uid://ycmuqryn6x2p::::res://Main/Script/new_script.gd<>uid://bskame4bjctgf::::res://Main/Scene/main_perso.gd<>uid://di8ywsjexd5hw::::res://Main/Textures/tmp.png<>uid://4gnsxli7s54s::::res://Main/Textures/banana.jpeg<>uid://bw41fhchojxvq::::res://Main/Textures/cookie.jpeg<>uid://5r11fhw58tvb::::res://Main/Textures/ewan.png
+scene.tscn::PackedScene::4432136985404688974::1775642437::0::1::::<><><>0<>0<><>::uid://ycmuqryn6x2p::::res://Main/Script/new_script.gd<>uid://bskame4bjctgf::::res://Main/Scene/main_perso.gd<>uid://di8ywsjexd5hw::::res://Main/Textures/tmp.png<>uid://be0knf8kfap3l::::res://Main/Textures/nina.png<>uid://4gnsxli7s54s::::res://Main/Textures/banana.jpeg<>uid://bw41fhchojxvq::::res://Main/Textures/cookie.jpeg<>uid://5r11fhw58tvb::::res://Main/Textures/ewan.png
 ::res://Main/Script/::1775635138
 new_script.gd::GDScript::1689426190356538121::1775635138::0::1::::<>Node2D<><>0<>0<><>::
-::res://Main/Textures/::1775640086
+::res://Main/Textures/::1775640087
 banana.jpeg::CompressedTexture2D::2048685422660441140::1775635369::1775635378::1::::<><><>0<>0<>276ea2f5691ee9309b676143ce63d9c2<>res://.godot/imported/banana.jpeg-e965814cc20ee467140f8125ce86c09c.ctex::
 cookie.jpeg::CompressedTexture2D::3992030140469197118::1775635536::1775635557::1::::<><><>0<>0<>d277a4d1d2ec2f4465bd9ca503c3a303<>res://.godot/imported/cookie.jpeg-380182c1b7d7b591dedbaf36e623d0e5.ctex::
 ewan.png::CompressedTexture2D::2142385077884813823::1775639960::1775639961::1::::<><><>0<>0<>f9153ff22c40924aabaf4d759ff3c342<>res://.godot/imported/ewan.png-52c350f69e7b233f64a03670769677f2.ctex::
