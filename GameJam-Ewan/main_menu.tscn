@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dxjht8xonmf6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31igl"]
+bg_color = Color(1.347661e-06, 0.52966696, 0.667266, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wjmr"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63ixx"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cokcd"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="Main_Menu" type="Control" unique_id=1809598063]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Jouer" type="Button" parent="." unique_id=1577628425]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 164.0
+offset_right = 318.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_31igl")
+text = "JOUER"
+
+[node name="Button_Classement" type="Button" parent="." unique_id=1910143629]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 225.0
+offset_right = 318.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1wjmr")
+text = "CLASSEMENTS"
+
+[node name="Button_Options" type="Button" parent="." unique_id=1535974170]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 285.0
+offset_right = 318.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_63ixx")
+text = "OPTIONS"
+
+[node name="Button_Quitter" type="Button" parent="." unique_id=1153219696]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 344.0
+offset_right = 319.0
+offset_bottom = 385.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_cokcd")
+text = "QUITTER"
