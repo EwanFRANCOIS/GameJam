@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bdbk66njgxa1o"]
+
+[ext_resource type="Script" uid="uid://cohaa81qi8nl8" path="res://GameJam/GameJam-Ewan/Script/menu_options.gd" id="1_p53nn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0qwk"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="Menu_Options" type="Control" unique_id=1087077226]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p53nn")
+
+[node name="Button_Audio" type="Button" parent="." unique_id=1987522725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -195.0
+offset_right = -188.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_g0qwk")
+text = "AUDIO"
+
+[node name="Button_Touches" type="Button" parent="." unique_id=1836097748]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -100.0
+offset_right = -188.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_g0qwk")
+text = "TOUCHES"
+
+[node name="Button_Langues" type="Button" parent="." unique_id=1587768730]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -3.0
+offset_right = -188.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_g0qwk")
+text = "LANGUE"
