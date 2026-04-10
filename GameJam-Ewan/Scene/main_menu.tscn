@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dxjht8xonmf6x"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkj2o"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31igl"]
 bg_color = Color(1.347661e-06, 0.52966696, 0.667266, 1)
 corner_radius_top_left = 16
@@ -48,6 +50,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background_Image" type="Panel" parent="." unique_id=872534328]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lkj2o")
+
 [node name="Button_Jouer" type="Button" parent="." unique_id=1577628425]
 layout_mode = 0
 offset_left = 120.0
@@ -87,3 +98,12 @@ offset_bottom = 385.0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_cokcd")
 text = "QUITTER"
+
+[node name="Label" type="Label" parent="." unique_id=802213547]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 76.0
+offset_right = 296.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 50
+text = "[TITRE]"
