@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dh06dqtttl7we"]
+
+[ext_resource type="Script" uid="uid://culfbd814ch5n" path="res://Main/Script/main_menu.gd" id="1_0xba0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l3a1"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="Main_Menu" type="Control" unique_id=625820473]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xba0")
+
+[node name="Background" type="Panel" parent="." unique_id=1805844295]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Jouer" type="Button" parent="." unique_id=1464761169]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 160.0
+offset_right = 356.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l3a1")
+text = "JOUER"
+
+[node name="Button_Classement" type="Button" parent="." unique_id=2108724555]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 249.0
+offset_right = 356.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l3a1")
+text = "CLASSEMENT"
+
+[node name="Button_Options" type="Button" parent="." unique_id=335667239]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 340.0
+offset_right = 356.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l3a1")
+text = "OPTIONS"
+
+[node name="Button_Quitter" type="Button" parent="." unique_id=1633280205]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 429.0
+offset_right = 356.0
+offset_bottom = 483.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l3a1")
+text = "QUITTER"
+
+[node name="Label" type="Label" parent="." unique_id=1499471879]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 102.0
+offset_right = 291.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 30
+text = "[TITRE]"
+
+[connection signal="pressed" from="Button_Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="Button_Classement" to="." method="_on_classement_pressed"]
+[connection signal="pressed" from="Button_Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_Quitter" to="." method="_on_quitter_pressed"]
