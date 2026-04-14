@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cobbgiqx2ds5l"]
+
+[ext_resource type="Script" uid="uid://dab4ek4qo4ay7" path="res://Main/Script/bgm_menu.gd" id="1_81s53"]
+
+[node name="BGM_Menu" type="AudioStreamPlayer2D" unique_id=2078641599]
+process_mode = 3
+script = ExtResource("1_81s53")
