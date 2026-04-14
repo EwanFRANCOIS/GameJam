@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dj378swravi1j"]
+
+[sub_resource type="GDScript" id="GDScript_qombx"]
+script/source = "extends CanvasLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	visible = false
+	get_tree().paused = false
+
+func _input(event : InputEvent) -> void:
+	if (Input.is_action_just_pressed(\"Escape(Menu)\")):
+		if (get_tree().paused):
+			visible = false
+			get_tree().paused = false
+		else:
+			visible = true
+			get_tree().paused = true
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_continuer_pressed() -> void:
+	visible = false
+	get_tree().paused = false
+
+
+func _on_retour_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://Main/Scene/main_menu.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qombx"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldlda"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1982010977]
+process_mode = 3
+script = SubResource("GDScript_qombx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=400450254]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4117647)
+
+[node name="Button_Continuer" type="Button" parent="ColorRect" unique_id=210959243]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -110.0
+offset_right = 115.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qombx")
+text = "CONTINUER
+"
+
+[node name="Button_Retour_Menu" type="Button" parent="ColorRect" unique_id=1357758843]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 26.0
+offset_right = 115.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ldlda")
+text = "RETOURNER AU MENU"
+
+[connection signal="pressed" from="ColorRect/Button_Continuer" to="." method="_on_continuer_pressed"]
+[connection signal="pressed" from="ColorRect/Button_Retour_Menu" to="." method="_on_retour_menu_pressed"]

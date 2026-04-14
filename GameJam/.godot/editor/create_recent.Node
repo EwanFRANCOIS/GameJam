@@ -1,6 +1,9 @@
+ColorRect
+CanvasLayer
+AnimationTree
+Panel
 Label
 Button
-Panel
 CollisionShape2D
 Sprite2D
 StaticBody2D

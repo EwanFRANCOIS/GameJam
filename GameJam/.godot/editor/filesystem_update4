@@ -1,0 +1,16 @@
+res://Main/Script/menu_options.gd
+res://Main/Scene/menu_options.tscn
+res://Main/Scene/menu_langue.tscn
+res://Main/Script/menu_langue.gd
+res://Main/Scene/menu_classement.tscn
+res://Main/Script/menu_classement.gd
+res://Main/Script/new_script.gd
+res://Main/Script/menu_in_game.gd
+res://Main/Scene/menu_in_game.tscn
+res://Main/Scene/scene.tscn
+res://Main/Scene/main_menu.tscn
+res://Main/Script/Scene_Script.gd
+res://Main/Scene/main_perso.gd
+res://Main/Materials/Pause_Menu.gdshader
+res://Main/Script/Pause_Menu.gd
+res://Main/Scene/pause_menu.tscn

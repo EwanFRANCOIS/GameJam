@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://ruq8h6rh67uq"]
 
+[ext_resource type="Script" uid="uid://cppief7ljywj7" path="res://Main/Script/menu_classement.gd" id="1_3225v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfunr"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
 [node name="menu_Classement" type="Control" unique_id=813307640]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +19,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3225v")
+
+[node name="Background" type="Panel" parent="." unique_id=1317527804]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Retour_Arriere" type="Button" parent="." unique_id=618233924]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 35.0
+offset_right = 269.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_bfunr")
+text = "<-------"
+
+[connection signal="pressed" from="Button_Retour_Arriere" to="." method="_on_retour_arriere_pressed"]
