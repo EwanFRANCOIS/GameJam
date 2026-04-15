@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="GameJam"
-run/main_scene="res://Main/Scene/scene.tscn"
-config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
+run/main_scene="uid://dh06dqtttl7we"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [dotnet]
 
