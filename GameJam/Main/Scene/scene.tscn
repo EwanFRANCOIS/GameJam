@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bskame4bjctgf" path="res://Main/Scene/main_perso.gd" id="2_63ixx"]
 [ext_resource type="Texture2D" uid="uid://dyfhkceinugap" path="res://Main/Textures/walkingPalette.png" id="3_yma8a"]
 [ext_resource type="Texture2D" uid="uid://b4274dgfcyyqy" path="res://Main/Textures/NicePng_white-fade-png_1992542.png" id="4_1rlo3"]
+[ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
 [ext_resource type="Texture2D" uid="uid://cfk15oncbqr6o" path="res://Main/Textures/cortisol.jpeg" id="8_j0eya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gg5i3"]
@@ -145,6 +146,12 @@ script = ExtResource("1_1wjmr")
 [node name="MainPerso" type="CharacterBody2D" parent="." unique_id=1589632525]
 script = ExtResource("2_63ixx")
 
+[node name="DashEffect" type="Node2D" parent="MainPerso" unique_id=2088296585]
+script = ExtResource("6_yma8a")
+is_original = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainPerso/DashEffect" unique_id=1326731295]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPerso" unique_id=1465677659]
 position = Vector2(594.5, 333)
 shape = SubResource("RectangleShape2D_gg5i3")
@@ -166,39 +173,67 @@ texture = ExtResource("4_1rlo3")
 [node name="Camera2D" type="Camera2D" parent="MainPerso" unique_id=832891321]
 position = Vector2(579, 321)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1719717042]
+[node name="Brouillard" type="CanvasLayer" parent="." unique_id=1884959277]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1821822726]
-position = Vector2(299.5, 244.75)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1306988606]
-position = Vector2(299.25, 244.5)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1884959277]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1902240252]
+[node name="ColorRect" type="ColorRect" parent="Brouillard" unique_id=1902240252]
 light_mask = 512
 offset_left = -1.0
 offset_right = 1151.0
 offset_bottom = 650.0
 color = Color(0, 0, 0, 0.39607844)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=390173145]
+[node name="GrassBackground" type="ColorRect" parent="." unique_id=390173145]
 z_index = -1
-offset_left = -2598.0
-offset_top = -854.0
-offset_right = 5527.0
-offset_bottom = 2715.0
+offset_left = -7433.0
+offset_top = -6280.0
+offset_right = 9264.0
+offset_bottom = 7993.0
 color = Color(0.13286918, 0.58456355, 0.052039675, 1)
 
-[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=234268327]
+[node name="TestLight" type="PointLight2D" parent="." unique_id=234268327]
 position = Vector2(910.3782, 510.49997)
 scale = Vector2(0.46648708, 0.44881886)
 energy = 2.2
 blend_mode = 2
 texture = ExtResource("4_1rlo3")
+
+[node name="Map" type="Node2D" parent="." unique_id=502411769]
+
+[node name="Building" type="StaticBody2D" parent="Map" unique_id=1719717042]
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building" unique_id=1821822726]
+position = Vector2(299.5, 244.75)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building" unique_id=1306988606]
+position = Vector2(299.25, 244.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building2" type="StaticBody2D" parent="Map" unique_id=1038557381]
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building2" unique_id=1104427573]
+position = Vector2(417.79272, -100.06409)
+rotation = 0.66703624
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building2" unique_id=1077209774]
+position = Vector2(417.54272, -100.31409)
+rotation = 0.66703624
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building3" type="StaticBody2D" parent="Map" unique_id=665712299]
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building3" unique_id=767146287]
+position = Vector2(807.602, -266.37506)
+rotation = 1.556776
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building3" unique_id=1553215295]
+position = Vector2(807.352, -266.62506)
+rotation = 1.556776
+shape = SubResource("RectangleShape2D_j0eya")
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]
