@@ -68,5 +68,6 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_40cm0")
 text = "<-------"
 
+[connection signal="pressed" from="Button_Audio" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="Button_Langue" to="." method="_on_langue_pressed"]
 [connection signal="pressed" from="Button_Retour_Arriere" to="." method="_on_retour_arriere_pressed"]

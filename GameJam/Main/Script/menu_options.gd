@@ -16,3 +16,7 @@ func _on_retour_arriere_pressed() -> void:
 
 func _on_langue_pressed() -> void:
 	get_tree().change_scene_to_file("res://Main/Scene/menu_langue.tscn")
+
+
+func _on_audio_pressed() -> void:
+	get_tree().change_scene_to_file("res://Main/Scene/menu_audio.tscn")

@@ -4,4 +4,5 @@
 
 [node name="BGM_Menu" type="AudioStreamPlayer2D" unique_id=2078641599]
 process_mode = 3
+bus = &"Musique"
 script = ExtResource("1_81s53")
