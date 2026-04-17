@@ -79,7 +79,6 @@ func get_input(delta: float):
 		velocity = input_direction * speed
 
 func spawnDashEffect() -> void:
-	print(get_children())
 	var ghost = get_node("DashEffect").duplicate()
 	get_parent().add_child(ghost)
 	

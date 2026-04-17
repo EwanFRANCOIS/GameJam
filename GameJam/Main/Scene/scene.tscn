@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bskame4bjctgf" path="res://Main/Scene/main_perso.gd" id="2_63ixx"]
 [ext_resource type="Texture2D" uid="uid://dyfhkceinugap" path="res://Main/Textures/walkingPalette.png" id="3_yma8a"]
 [ext_resource type="Texture2D" uid="uid://b4274dgfcyyqy" path="res://Main/Textures/NicePng_white-fade-png_1992542.png" id="4_1rlo3"]
+[ext_resource type="Texture2D" uid="uid://b0xi7pl8uw0mk" path="res://Main/Textures/walkingPaletteLef.png" id="5_2irwo"]
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
 [ext_resource type="Texture2D" uid="uid://cfk15oncbqr6o" path="res://Main/Textures/cortisol.jpeg" id="8_j0eya"]
 
@@ -26,6 +27,10 @@ region = Rect2(510, 1574, 510, 787)
 atlas = ExtResource("3_yma8a")
 region = Rect2(510, 0, 510, 787)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_li0qw"]
+atlas = ExtResource("5_2irwo")
+region = Rect2(0, 0, 476, 753)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1rlo3"]
 atlas = ExtResource("3_yma8a")
 region = Rect2(1020, 0, 510, 787)
@@ -33,6 +38,18 @@ region = Rect2(1020, 0, 510, 787)
 [sub_resource type="AtlasTexture" id="AtlasTexture_yma8a"]
 atlas = ExtResource("3_yma8a")
 region = Rect2(0, 0, 510, 787)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebisl"]
+atlas = ExtResource("5_2irwo")
+region = Rect2(0, 0, 476, 753)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apvie"]
+atlas = ExtResource("5_2irwo")
+region = Rect2(0, 753, 476, 753)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5d3s"]
+atlas = ExtResource("5_2irwo")
+region = Rect2(0, 1506, 476, 753)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6gkg"]
 atlas = ExtResource("3_yma8a")
@@ -82,7 +99,10 @@ animations = [{
 "name": &"idleD",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li0qw")
+}],
 "loop": true,
 "name": &"idleL",
 "speed": 10.0
@@ -103,7 +123,16 @@ animations = [{
 "name": &"idleU",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebisl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apvie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5d3s")
+}],
 "loop": true,
 "name": &"leftW",
 "speed": 10.0
@@ -161,7 +190,7 @@ z_index = 3
 position = Vector2(596, 314)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_63ixx")
-animation = &"upW"
+animation = &"idleL"
 
 [node name="PointLight2D" type="PointLight2D" parent="MainPerso" unique_id=1486119499]
 position = Vector2(594, 333)
@@ -184,10 +213,10 @@ color = Color(0, 0, 0, 0.39607844)
 
 [node name="GrassBackground" type="ColorRect" parent="." unique_id=390173145]
 z_index = -1
-offset_left = -7433.0
-offset_top = -6280.0
-offset_right = 9264.0
-offset_bottom = 7993.0
+offset_left = -7407.0
+offset_top = -6286.0
+offset_right = 9290.0
+offset_bottom = 7987.0
 color = Color(0.13286918, 0.58456355, 0.052039675, 1)
 
 [node name="TestLight" type="PointLight2D" parent="." unique_id=234268327]
