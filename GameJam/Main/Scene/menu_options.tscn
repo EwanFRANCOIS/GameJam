@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://ddf1hi2c113ea"]
 
+[ext_resource type="Script" uid="uid://bupr5alulka41" path="res://Main/Script/menu_options.gd" id="1_2vluv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40cm0"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
 [node name="menu_Options" type="Control" unique_id=1554616855]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +19,55 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2vluv")
+
+[node name="Background" type="Panel" parent="." unique_id=591867245]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=957994748]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 38.0
+offset_right = 663.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
+
+[node name="Button_Audio" type="Button" parent="." unique_id=1027401860]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 144.0
+offset_right = 397.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_40cm0")
+text = "AUDIO"
+
+[node name="Button_Langue" type="Button" parent="." unique_id=2090028106]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 249.0
+offset_right = 397.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_40cm0")
+text = "LANGUE"
+
+[node name="Button_Retour_Arriere" type="Button" parent="." unique_id=2104448415]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 35.0
+offset_right = 269.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_40cm0")
+text = "<-------"
+
+[connection signal="pressed" from="Button_Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Button_Langue" to="." method="_on_langue_pressed"]
+[connection signal="pressed" from="Button_Retour_Arriere" to="." method="_on_retour_arriere_pressed"]

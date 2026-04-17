@@ -1,2 +1,10 @@
 res://Main/Scene/scene.tscn
 res://Main/Scene/main_perso.gd
+res://Main/Scene/audio_slide_options.tscn
+res://Main/Materials/Pause_Menu.gdshader
+res://default_bus_layout.tres
+res://Main/Scene/bgm_menu.tscn
+res://Main/Script/audio_slide_options.gd
+res://Main/Script/menu_audio.gd
+res://Main/Scene/menu_audio.tscn
+res://Main/Script/audio_control.gd

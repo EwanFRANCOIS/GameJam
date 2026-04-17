@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://blkdfrimj4xf"]
+
+[ext_resource type="Script" uid="uid://cqvgqjbbepht4" path="res://Main/Script/menu_langue.gd" id="1_7xs38"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adawv"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0vm8"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="Menu_Langue" type="Control" unique_id=1804377389]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7xs38")
+
+[node name="Background" type="Panel" parent="." unique_id=1250458414]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=56808985]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 61.0
+offset_right = 678.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 40
+text = "LANGUES"
+
+[node name="Button_Francais" type="Button" parent="." unique_id=696697100]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 160.0
+offset_right = 356.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_adawv")
+text = "Français"
+
+[node name="Button_Anglais" type="Button" parent="." unique_id=1857444013]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 159.0
+offset_right = 1039.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_adawv")
+text = "Anglais
+"
+
+[node name="Button_Retour_Arriere" type="Button" parent="." unique_id=1489983474]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 33.0
+offset_right = 268.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_h0vm8")
+text = "<-------"
+
+[connection signal="pressed" from="Button_Retour_Arriere" to="." method="_on_retour_arriere_pressed"]
