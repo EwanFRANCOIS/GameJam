@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bq6gvfefjm461"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a488"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="menu_Controles" type="Control" unique_id=1871934525]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=1504118980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Retour_Arriere" type="Button" parent="." unique_id=1540154357]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 35.0
+offset_right = 269.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a488")
+text = "<-------"
+
+[node name="Titre" type="Label" parent="." unique_id=1194241933]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 38.0
+offset_right = 663.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 40
+text = "CONTRÔLES"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1224045222]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 140.0
+offset_right = 450.0
+offset_bottom = 581.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1364057954]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Avancer en haut"
