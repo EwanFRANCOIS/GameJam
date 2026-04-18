@@ -56,15 +56,18 @@ func animPerso():
 				AnimatedSprite.play("idleD")
 
 func get_input(delta: float):
+	var input_direction = Input.get_vector("left", "right", "up", "down")
+	
 	# Dash
 	if Input.is_action_pressed("dash") and isDashing != true and inCooldown_dash != true:
-		# Start dashing
-		isDashing = true
-		dashTimer = delta
-		ghost_timer = ghost_interval
+		if input_direction != Vector2.ZERO:
+			# Start dashing
+			isDashing = true
+			dashTimer = delta
+			ghost_timer = ghost_interval
 		
-		inCooldown_dash = true
-		cooldownDash_timer = 0
+			inCooldown_dash = true
+			cooldownDash_timer = 0
 	elif isDashing == true:
 		# Stop dashing if timer exceed dash lifetime
 		dashTimer += delta
@@ -72,7 +75,6 @@ func get_input(delta: float):
 			isDashing = false
 	
 	# Velocity
-	var input_direction = Input.get_vector("left", "right", "up", "down")
 	if isDashing == true:
 		velocity = input_direction * dashSpeed
 	else:

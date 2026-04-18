@@ -1,6 +1,8 @@
+CollisionShape2D
 AnimatedSprite2D
-Sprite2D
 Node2D
+CharacterBody2D
+Sprite2D
 Node
 Camera2D
 PointLight2D
@@ -11,13 +13,3 @@ VSeparator
 Label
 ScrollContainer
 HBoxContainer
-VBoxContainer
-Panel
-AudioStreamPlayer2D
-ColorRect
-CanvasLayer
-AnimationTree
-Button
-CollisionShape2D
-StaticBody2D
-CharacterBody2D

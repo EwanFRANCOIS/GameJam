@@ -1,2 +1,5 @@
 res://Main/Scene/scene.tscn
 res://Main/Materials/Pause_Menu.gdshader
+res://Main/Scene/main_perso.gd
+res://Main/Scene/monster_template.gd
+res://Main/Script/Scene_Script.gd
