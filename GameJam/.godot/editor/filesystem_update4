@@ -1,7 +1,2 @@
-res://Main/Materials/Pause_Menu.gdshader
-res://Main/Scene/inventaire.tscn
-res://Main/Script/inventaire.gd
-res://Main/Script/menu_options.gd
-res://Main/Scene/menu_options.tscn
-res://Main/Scene/pause_menu.tscn
 res://Main/Scene/menu_controles.tscn
+res://Main/Materials/Pause_Menu.gdshader

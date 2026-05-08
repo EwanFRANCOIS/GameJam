@@ -1,10 +1,11 @@
+Control
+Label
 HBoxContainer
 MarginContainer
 Button
 VBoxContainer
 ScrollContainer
 PanelContainer
-Label
 Panel
 AnimatedSprite2D
 Sprite2D
@@ -12,4 +13,3 @@ Node2D
 Node
 Camera2D
 PointLight2D
-ColorRect

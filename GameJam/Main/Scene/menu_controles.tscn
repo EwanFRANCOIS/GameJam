@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://bq6gvfefjm461"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a488"]
-bg_color = Color(0, 0.5294118, 0.6666667, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.4)
+bg_color = Color(0, 0, 0, 0.49019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljjgq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt4ts"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtkxf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q42cy"]
 
 [node name="menu_Controles" type="Control" unique_id=1871934525]
 layout_mode = 3
@@ -18,42 +19,76 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="Panel" parent="." unique_id=1504118980]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=794374301]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -481.0
+offset_top = -298.0
+offset_right = 481.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=343431546]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1560542068]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=792371744]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=391701733]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" unique_id=835970597]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3a488")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ljjgq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mt4ts")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtkxf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_q42cy")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList/Button" unique_id=1553749401]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
 
-[node name="Button_Retour_Arriere" type="Button" parent="." unique_id=1540154357]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 35.0
-offset_right = 269.0
-offset_bottom = 89.0
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_3a488")
-text = "<-------"
-
-[node name="Titre" type="Label" parent="." unique_id=1194241933]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 38.0
-offset_right = 663.0
-offset_bottom = 93.0
-theme_override_font_sizes/font_size = 40
-text = "CONTRÔLES"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1224045222]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 140.0
-offset_right = 450.0
-offset_bottom = 581.0
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1364057954]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer" unique_id=673236491]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "Avancer en haut"
+
+[node name="LabelAction" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer" unique_id=310998207]
+layout_mode = 2
+mouse_filter = 1
+text = "Action Name"
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer" unique_id=1204127137]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="LabelInput" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer" unique_id=1786293044]
+layout_mode = 2
+mouse_filter = 1
+text = "Input Key"
+vertical_alignment = 1
