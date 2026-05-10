@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b4e7wb127e4go"]
 
-[ext_resource type="Script" uid="uid://ycmuqryn6x2p" path="res://Main/Script/Scene_Script.gd" id="1_1wjmr"]
 [ext_resource type="Script" uid="uid://bskame4bjctgf" path="res://Main/Scene/main_perso.gd" id="2_63ixx"]
 [ext_resource type="Texture2D" uid="uid://dyfhkceinugap" path="res://Main/Textures/walkingPalette.png" id="3_yma8a"]
 [ext_resource type="Texture2D" uid="uid://b4274dgfcyyqy" path="res://Main/Textures/NicePng_white-fade-png_1992542.png" id="4_1rlo3"]
@@ -8,6 +7,9 @@
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
 [ext_resource type="Texture2D" uid="uid://cfk15oncbqr6o" path="res://Main/Textures/cortisol.jpeg" id="8_j0eya"]
 [ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
+[ext_resource type="PackedScene" uid="uid://cvvkqk4q3i4sw" path="res://Main/Scene/enemy.tscn" id="9_i6gkg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gg5i3"]
 size = Vector2(35, 28)
@@ -171,9 +173,9 @@ animations = [{
 size = Vector2(195.5, 305)
 
 [node name="Scene" type="Node2D" unique_id=686424288]
-script = ExtResource("1_1wjmr")
 
 [node name="MainPerso" type="CharacterBody2D" parent="." unique_id=1589632525]
+material = SubResource("ShaderMaterial_j0eya")
 script = ExtResource("2_63ixx")
 
 [node name="DashEffect" type="Node2D" parent="MainPerso" unique_id=2088296585]
@@ -268,5 +270,7 @@ shape = SubResource("RectangleShape2D_j0eya")
 
 [node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
 visible = false
+
+[node name="Enemy" parent="." unique_id=662743024 instance=ExtResource("9_i6gkg")]
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

@@ -1,3 +1,6 @@
+Node2D
+Timer
+Sprite2D
 Control
 Label
 HBoxContainer
@@ -8,8 +11,4 @@ ScrollContainer
 PanelContainer
 Panel
 AnimatedSprite2D
-Sprite2D
-Node2D
 Node
-Camera2D
-PointLight2D

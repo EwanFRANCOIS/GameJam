@@ -1,13 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778268532
+::res://::1778435636
 default_bus_layout.tres::AudioBusLayout::78148791792621261::1776460891::0::1::::<><><>0<>0<><>::
 ::res://Main/::1776501916
 ::res://Main/Audio/::1776185508
 BGM_Theme.mp3::AudioStreamMP3::8902742584264455498::1776185508::1776185508::1::::<><><>0<>0<>72389b401ee5a5eb4f7fd827fd73a485<>res://.godot/imported/BGM_Theme.mp3-c8b8b882e014b3cad8107f41400ee269.mp3str::
 ::res://Main/Controles/::1776501910
-::res://Main/Materials/::1776500085
-Pause_Menu.gdshader::Shader::916585305678701215::1776500085::0::1::::<><><>0<>0<><>::
-::res://Main/Scene/::1776502365
+::res://Main/Materials/::1778269148
+Pause_Menu.gdshader::Shader::916585305678701215::1778269148::0::1::::<><><>0<>0<><>::
+::res://Main/Scene/::1778269148
 audio_slide_options.tscn::PackedScene::2224049753597313694::1776459916::0::1::::<><><>0<>0<><>::
 bgm_menu.tscn::PackedScene::5757621433813818487::1776460113::0::1::::<><><>0<>0<><>::uid://dab4ek4qo4ay7::::res://Main/Script/bgm_menu.gd
 dash_effect.gd::GDScript::6953718023234903218::1776499798::0::1::::<>Node2D<><>0<>0<><>::
@@ -15,7 +15,7 @@ main_menu.tscn::PackedScene::7704081855168519064::1776186783::0::1::::<><><>0<>0
 main_perso.gd::GDScript::3670485331195432349::1776499798::0::1::::<>CharacterBody2D<><>0<>0<><>::
 menu_audio.tscn::PackedScene::3556237623230950843::1776461228::0::1::::<><><>0<>0<><>::uid://bpned0afefrvg::::res://Main/Script/menu_audio.gd<>uid://b7mchqrj78ty4::::res://Main/Script/audio_control.gd
 menu_classement.tscn::PackedScene::1235528716346271616::1776186122::0::1::::<><><>0<>0<><>::uid://cppief7ljywj7::::res://Main/Script/menu_classement.gd
-menu_controles.tscn::PackedScene::3573839964941752636::1776502365::0::1::::<><><>0<>0<><>::
+menu_controles.tscn::PackedScene::3573839964941752636::1778269148::0::1::::<><><>0<>0<><>::
 menu_langue.tscn::PackedScene::93509815500402511::1776186127::0::1::::<><><>0<>0<><>::uid://cqvgqjbbepht4::::res://Main/Script/menu_langue.gd
 menu_options.tscn::PackedScene::7381742075156151912::1776501308::0::1::::<><><>0<>0<><>::uid://bupr5alulka41::::res://Main/Script/menu_options.gd
 pause_menu.tscn::PackedScene::7850767076081894245::1776501630::0::1::::<><><>0<>0<><>::

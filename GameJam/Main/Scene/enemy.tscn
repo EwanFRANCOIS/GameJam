@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cvvkqk4q3i4sw"]
+
+[ext_resource type="Texture2D" uid="uid://cfk15oncbqr6o" path="res://Main/Textures/cortisol.jpeg" id="1_mgmgo"]
+
+[sub_resource type="GDScript" id="GDScript_2irwo"]
+script/source = "extends Node2D
+
+const BULLET_SCENE = preload(\"res://Main/Scene/bullet.tscn\")
+@onready var shoot_timer: Timer = $ShootTimer
+@onready var rotator: Node2D = $Rotator
+
+@export var rotate_speed = 30 # Vitesse de rotation
+const shooter_timer_wait_time = 0.2 # Délai d'attente entre chaque tire
+const spawn_point_count = 4 # Nombre de point de spawn autour du sprite
+const radius= 100 # Radius du cercle
+
+func _ready():
+	var step = 2 * PI / spawn_point_count # prend chaque pi/4 distance sur le cercle
+	
+	for i in range(spawn_point_count):
+		var spawn_point = Node2D.new()
+		var pos = Vector2(radius, 0).rotated(step * i)
+		spawn_point.position = pos
+		spawn_point.rotation = pos.angle()
+		rotator.add_child(spawn_point)
+	 
+	shoot_timer.wait_time = shooter_timer_wait_time
+	shoot_timer.start()
+
+func _process(delta: float) -> void:
+	var new_rotation = rotator.rotation_degrees + rotate_speed * delta
+	rotator.rotation_degrees = fmod(new_rotation, 360)
+
+func _on_shoot_timer_timeout() -> void:
+	for s in rotator.get_children():
+		var new_bullet = BULLET_SCENE.instantiate()
+		get_tree().root.add_child(new_bullet)
+		new_bullet.position = s.global_position
+		new_bullet.rotation = s.global_rotation
+"
+
+[node name="Enemy" type="Node2D" unique_id=662743024]
+script = SubResource("GDScript_2irwo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=333215747]
+position = Vector2(567, 251)
+scale = Vector2(0.344, 0.4)
+texture = ExtResource("1_mgmgo")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1991328734]
+
+[node name="Rotator" type="Node2D" parent="." unique_id=453262701]
+position = Vector2(570, 248)
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

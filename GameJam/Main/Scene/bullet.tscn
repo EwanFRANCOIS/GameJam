@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ung22ovgqukk"]
+
+[ext_resource type="Script" uid="uid://1khxjne6sp6q" path="res://Main/Script/bullet.gd" id="1_ejhgi"]
+[ext_resource type="Texture2D" uid="uid://5r11fhw58tvb" path="res://Main/Textures/ewan.png" id="2_rjosc"]
+
+[node name="Bullet" type="Node2D" unique_id=2048914222]
+script = ExtResource("1_ejhgi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=774118457]
+position = Vector2(604, 300.1)
+scale = Vector2(0.489, 0.4)
+texture = ExtResource("2_rjosc")
+
+[node name="KillBulletTimer" type="Timer" parent="." unique_id=1673874839]
+wait_time = 10.0
+
+[connection signal="timeout" from="KillBulletTimer" to="." method="_on_kill_bullet_timer_timeout"]

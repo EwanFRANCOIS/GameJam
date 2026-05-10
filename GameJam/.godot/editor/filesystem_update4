@@ -1,2 +1,8 @@
-res://Main/Scene/menu_controles.tscn
+res://Main/Scene/menu_options.tscn
 res://Main/Materials/Pause_Menu.gdshader
+res://Main/Scene/scene.tscn
+res://Main/Script/bullet.gd
+res://Main/Scene/bullet.tscn
+res://Main/Scene/enemy.tscn
+res://Main/Script/rotator.gd
+res://Main/Script/enemy.gd
