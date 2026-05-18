@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b4274dgfcyyqy" path="res://Main/Textures/NicePng_white-fade-png_1992542.png" id="4_1rlo3"]
 [ext_resource type="Texture2D" uid="uid://b0xi7pl8uw0mk" path="res://Main/Textures/walkingPaletteLef.png" id="5_2irwo"]
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
+[ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="8_gg5i3"]
 [ext_resource type="Texture2D" uid="uid://cfk15oncbqr6o" path="res://Main/Textures/cortisol.jpeg" id="8_j0eya"]
 [ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
-[ext_resource type="PackedScene" uid="uid://cvvkqk4q3i4sw" path="res://Main/Scene/enemy.tscn" id="9_i6gkg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -271,6 +271,9 @@ shape = SubResource("RectangleShape2D_j0eya")
 [node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
 visible = false
 
-[node name="Enemy" parent="." unique_id=662743024 instance=ExtResource("9_i6gkg")]
+[node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
+position = Vector2(943, 214)
+bullets_per_wave = 4
+fire_rate = 1.0
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

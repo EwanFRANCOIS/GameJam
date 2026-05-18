@@ -1,6 +1,10 @@
-Node2D
 Timer
+CollisionShape2D
 Sprite2D
+CharacterBody2D
+VisibleOnScreenEnabler2D
+Area2D
+Node2D
 Control
 Label
 HBoxContainer
@@ -8,7 +12,3 @@ MarginContainer
 Button
 VBoxContainer
 ScrollContainer
-PanelContainer
-Panel
-AnimatedSprite2D
-Node
