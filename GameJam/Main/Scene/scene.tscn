@@ -273,7 +273,6 @@ visible = false
 
 [node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
 position = Vector2(943, 214)
-bullets_per_wave = 4
-fire_rate = 1.0
+fire_rate = 0.5
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

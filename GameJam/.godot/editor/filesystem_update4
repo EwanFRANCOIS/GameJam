@@ -1,7 +1,2 @@
-res://Main/Scene/enemy.tscn
-res://Main/Materials/Pause_Menu.gdshader
 res://Main/Scene/scene.tscn
-res://Main/Scene/bullet.tscn
-res://Main/Script/bullet.gd
-res://main/Script/boss.gd
-res://Main/Scene/boss.tscn
+res://Main/Materials/Pause_Menu.gdshader
