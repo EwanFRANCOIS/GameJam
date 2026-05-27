@@ -1,9 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775573095
-::res://Main/::1775573095
-::res://Main/Assets/::1775572797
-::res://Main/Assets/Characters/::1775572797
-::res://Main/Assets/Ennemies/::1775572792
-::res://Main/Map/::1775572807
-::res://Main/Map/Grid/::1775572807
-::res://Scripts/::1775572739
+::res://::1775629507
+::res://Main/::1775574860
+::res://Main/Scene/::1775575155
+scene.tscn::PackedScene::4432136985404688974::1775575155::0::1::::<><><>0<>0<><>::uid://ycmuqryn6x2p::::res://Main/Scripts/new_script.gd<>uid://nea1clj4lgfa::::res://Main/Scene/sprite_2d.gd
+sprite_2d.gd::GDScript::920759031439848266::1775575143::0::1::::<>Sprite2D<><>0<>0<><>::
+::res://Main/Scripts/::1775575059
+new_script.gd::GDScript::1689426190356538121::1775574860::0::1::::<>Node2D<><>0<>0<><>::
