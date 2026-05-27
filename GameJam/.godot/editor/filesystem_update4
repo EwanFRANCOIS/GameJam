@@ -1,0 +1,4 @@
+res://Main/Scene/scene.tscn
+res://Main/Scene/grass.gdshader
+res://Main/Scene/fogshader.gdshader
+res://Main/Materials/Pause_Menu.gdshader
