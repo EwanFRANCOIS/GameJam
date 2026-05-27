@@ -80,6 +80,7 @@ func get_input(delta: float):
 	else:
 		velocity = input_direction * speed
 
+var lastColorIndexDashEffect = 0
 func spawnDashEffect() -> void:
 	var ghost = get_node("DashEffect").duplicate()
 	get_parent().add_child(ghost)
@@ -109,12 +110,15 @@ func spawnDashEffect() -> void:
 		Color(0, 1, 1, 0.7),
 		Color(1, 1, 0, 0.7)
 	]
-	ghost.modulate = colors[randi() % colors.size()]
+	ghost.modulate = colors[lastColorIndexDashEffect-1] # colors[randi() % colors.size()]
 	
 func dashEffect(delta) -> void:
 	if isDashing:
 		ghost_timer-=delta
 		if ghost_timer <= 0:
+			lastColorIndexDashEffect+=1
+			if lastColorIndexDashEffect > 3:
+				lastColorIndexDashEffect = 1
 			spawnDashEffect()
 			ghost_timer = ghost_interval
 	
