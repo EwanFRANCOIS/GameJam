@@ -56,7 +56,7 @@ offset_right = 397.0
 offset_bottom = 303.0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_40cm0")
-text = "LANGUE"
+text = "LANGUES"
 
 [node name="Button_Retour_Arriere" type="Button" parent="." unique_id=2104448415]
 layout_mode = 0

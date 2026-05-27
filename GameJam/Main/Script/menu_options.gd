@@ -20,3 +20,7 @@ func _on_langue_pressed() -> void:
 
 func _on_audio_pressed() -> void:
 	get_tree().change_scene_to_file("res://Main/Scene/menu_audio.tscn")
+	
+
+func _on_controles_pressed() -> void:
+	get_tree().change_scene_to_file("res://Main/Scene/menu_controles.tscn")
