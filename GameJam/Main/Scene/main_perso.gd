@@ -56,15 +56,18 @@ func animPerso():
 				AnimatedSprite.play("idleD")
 
 func get_input(delta: float):
+	var input_direction = Input.get_vector("left", "right", "up", "down")
+	
 	# Dash
 	if Input.is_action_pressed("dash") and isDashing != true and inCooldown_dash != true:
-		# Start dashing
-		isDashing = true
-		dashTimer = delta
-		ghost_timer = ghost_interval
+		if input_direction != Vector2.ZERO:
+			# Start dashing
+			isDashing = true
+			dashTimer = delta
+			ghost_timer = ghost_interval
 		
-		inCooldown_dash = true
-		cooldownDash_timer = 0
+			inCooldown_dash = true
+			cooldownDash_timer = 0
 	elif isDashing == true:
 		# Stop dashing if timer exceed dash lifetime
 		dashTimer += delta
@@ -72,12 +75,12 @@ func get_input(delta: float):
 			isDashing = false
 	
 	# Velocity
-	var input_direction = Input.get_vector("left", "right", "up", "down")
 	if isDashing == true:
 		velocity = input_direction * dashSpeed
 	else:
 		velocity = input_direction * speed
 
+var lastColorIndexDashEffect = 0
 func spawnDashEffect() -> void:
 	var ghost = get_node("DashEffect").duplicate()
 	get_parent().add_child(ghost)
@@ -107,12 +110,15 @@ func spawnDashEffect() -> void:
 		Color(0, 1, 1, 0.7),
 		Color(1, 1, 0, 0.7)
 	]
-	ghost.modulate = colors[randi() % colors.size()]
+	ghost.modulate = colors[lastColorIndexDashEffect-1] # colors[randi() % colors.size()]
 	
 func dashEffect(delta) -> void:
 	if isDashing:
 		ghost_timer-=delta
 		if ghost_timer <= 0:
+			lastColorIndexDashEffect+=1
+			if lastColorIndexDashEffect > 3:
+				lastColorIndexDashEffect = 1
 			spawnDashEffect()
 			ghost_timer = ghost_interval
 	
