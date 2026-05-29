@@ -3,19 +3,22 @@
 [ext_resource type="Script" uid="uid://1khxjne6sp6q" path="res://Main/Script/bullet.gd" id="1_ejhgi"]
 [ext_resource type="Texture2D" uid="uid://5r11fhw58tvb" path="res://Main/Textures/ewan.png" id="2_rjosc"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gg2da"]
-radius = 65.00769
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejhgi"]
+size = Vector2(66, 65)
 
-[node name="Bullet" type="Area2D" unique_id=777958571]
+[node name="Bullet" type="Area2D" unique_id=1291451797]
 script = ExtResource("1_ejhgi")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=928759944]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=866909405]
+position = Vector2(-32, -31.75)
+scale = Vector2(0.50769234, 0.50775194)
 texture = ExtResource("2_rjosc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787247717]
-shape = SubResource("CircleShape2D_gg2da")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=722470491]
+rect = Rect2(-65, -64, 64, 64)
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=550700086]
-rect = Rect2(-65, -64, 130, 129)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=885744439]
+position = Vector2(-32, -31.5)
+shape = SubResource("RectangleShape2D_ejhgi")
 
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_screen_exited"]

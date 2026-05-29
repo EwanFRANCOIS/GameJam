@@ -1,4 +1,8 @@
-res://Main/Scene/scene.tscn
+res://Main/Script/boss.gd
+res://Main/Scene/boss.tscn
 res://Main/Scene/grass.gdshader
 res://Main/Scene/fogshader.gdshader
 res://Main/Materials/Pause_Menu.gdshader
+res://Main/Scene/bullet.tscn
+res://Main/Script/bullet.gd
+res://Main/Scene/boss_room(test).tscn

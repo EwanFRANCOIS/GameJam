@@ -1,21 +1,20 @@
 [gd_scene format=3 uid="uid://ejbpy0fbnvsb"]
 
-[ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://main/Script/boss.gd" id="1_u3jhw"]
+[ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://Main/Script/boss.gd" id="1_u3jhw"]
 [ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="2_j5g6d"]
 [ext_resource type="PackedScene" uid="uid://ung22ovgqukk" path="res://Main/Scene/bullet.tscn" id="2_rs1ry"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1ry"]
-size = Vector2(224, 225)
-
-[node name="Boss" type="CharacterBody2D" unique_id=1258479015]
+[node name="Boss" type="CharacterBody2D" unique_id=398423175]
 script = ExtResource("1_u3jhw")
-bullet_scene = ExtResource("2_rs1ry")
+bullet_node = ExtResource("2_rs1ry")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=806171250]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713524164]
+position = Vector2(4.000004, -3.0000038)
+scale = Vector2(0.4911111, 0.48222223)
 texture = ExtResource("2_j5g6d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446635468]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_rs1ry")
+[node name="Speed" type="Timer" parent="." unique_id=1649513388]
+wait_time = 0.05
+autostart = true
 
-[node name="ShootTimer" type="Timer" parent="." unique_id=928748952]
+[connection signal="timeout" from="Speed" to="." method="_on_speed_timeout"]
