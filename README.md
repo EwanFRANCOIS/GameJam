@@ -7,6 +7,8 @@ Nous avons utiliser le moteur de jeu Godot afin de réaliser ce jeu.
 
 Pour plus d'informations sur l'évènement: https://itch.io/jam/pixels-en-provence
 
+Notre équipe: Ewan FRANCOIS, Nina MATIC-CHARBIT, Audren METERY-DROUIN, Imad SERIDJ
+
 ---
 
 Notre jeu se prénomme _**Aix-in-mud**_
