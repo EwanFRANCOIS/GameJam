@@ -16,4 +16,4 @@ et la grande déesse de l'eau de la ville d'Aix-en-Provence vous demande de l'ai
 
 Armez-vous de votre arrosoir pour purifier les rues en arrosant les buissons/arbres qui s'y trouvent pour repousser les monstres et le brouillard!
 
-[image](./Pictures/titleAixInMud.png?raw=true)
+![image](Pictures/titleAixInMud.png)
