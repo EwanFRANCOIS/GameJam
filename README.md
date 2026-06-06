@@ -1,4 +1,7 @@
 # GameJam Pixels-en-Provence
+Jeu réalisé comme défis lors d'un GameJam
+
+---
 
 Bonjour tout le monde!
 
