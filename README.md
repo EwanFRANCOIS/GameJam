@@ -13,8 +13,7 @@ Notre équipe: Ewan FRANCOIS, Nina MATIC-CHARBIT, Audren METERY-DROUIN, Imad SER
 
 Notre jeu se prénomme _**Aix-in-mud**_
 
-Un épais nuage toxiques ainsi que des monstres de boues sont apparues et qui ont envahis les rues et dans le centre-ville d'Aix-en-Provence,
-et la grande déesse de l'eau de la ville d'Aix-en-Provence vous demande de l'aide dans son combat contre ces monstres.
+Un épais nuage toxiques ainsi que des monstres de boues sont apparues et ont envahis les rues dans le centre-ville d'Aix-en-Provence, la grande déesse de l'eau de la ville d'Aix-en-Provence vous demande de l'aide dans son combat contre ces monstres.
 
 Armez-vous de votre arrosoir pour purifier les rues en arrosant les buissons/arbres qui s'y trouvent pour repousser les monstres et le brouillard!
 
