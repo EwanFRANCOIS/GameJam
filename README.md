@@ -2,7 +2,7 @@
 
 Bonjour tout le monde!
 
-Ce dépôt regroupe le jeu que nous avons développer pour le gamejam du département informatique de l'IUT d'Aix-Marseille.
+Ce dépôt regroupe le jeu que nous avons développer pour la gamejam du département informatique de l'IUT d'Aix-Marseille.
 Nous avons utiliser le moteur de jeu Godot afin de réaliser ce jeu.
 
 Pour plus d'informations sur l'évènement: https://itch.io/jam/pixels-en-provence
