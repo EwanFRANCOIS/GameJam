@@ -10,15 +10,14 @@ size = Vector2(66, 65)
 script = ExtResource("1_ejhgi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=866909405]
-position = Vector2(-32, -31.75)
 scale = Vector2(0.50769234, 0.50775194)
 texture = ExtResource("2_rjosc")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=722470491]
+position = Vector2(33, 32)
 rect = Rect2(-65, -64, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=885744439]
-position = Vector2(-32, -31.5)
 shape = SubResource("RectangleShape2D_ejhgi")
 
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_screen_exited"]

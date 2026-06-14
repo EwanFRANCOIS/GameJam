@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c5nb3mrh0ia54"]
+
+[ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="1_c4r8i"]
+
+[node name="BossRoomTest" type="Node2D" unique_id=425523820]
+
+[node name="Boss" parent="." unique_id=398423175 instance=ExtResource("1_c4r8i")]
+position = Vector2(577, 297)
+alpha = 1.3
