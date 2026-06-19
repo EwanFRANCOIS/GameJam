@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://nvra1w7847ec" path="res://Main/Textures/white-square-2.webp" id="11_3qne0"]
 [ext_resource type="Shader" uid="uid://ck7veq4n1yjt8" path="res://Main/Scene/fogshader.gdshader" id="11_rxnsx"]
 [ext_resource type="Script" uid="uid://4fmtefylaevf" path="res://Main/Scene/fog_overlay.gd" id="12_rxnsx"]
+[ext_resource type="PackedScene" uid="uid://umna314o7tp7" path="res://Main/Scene/Barre_de_vie.tscn" id="15_sepy4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -414,5 +415,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")
 lights = [NodePath("../../MainPerso"), NodePath("../../Map/Light1"), NodePath("../../Map/Fountain")]
+
+[node name="Barre_de_vie" type="CanvasLayer" parent="." unique_id=808598016]
+layer = 2
+
+[node name="Barre_de_vie" parent="Barre_de_vie" unique_id=2119586583 instance=ExtResource("15_sepy4")]
+z_index = 10
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

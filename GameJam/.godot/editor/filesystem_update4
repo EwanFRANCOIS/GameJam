@@ -1,4 +1,5 @@
-res://Main/Scene/scene.tscn
 res://Main/Scene/grass.gdshader
 res://Main/Scene/fogshader.gdshader
 res://Main/Materials/Pause_Menu.gdshader
+res://Main/Script/Barre_de_vie.gd
+res://Main/Scene/scene.tscn
