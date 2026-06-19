@@ -8,7 +8,7 @@ radius = 790.50006
 
 [node name="NPC_GODDESS" type="Sprite2D" unique_id=828316896]
 position = Vector2(562, 305)
-scale = Vector2(0.33, 0.33)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_fvbq4")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=986838409]
@@ -20,6 +20,6 @@ position = Vector2(-109.5, 10)
 shape = SubResource("CircleShape2D_xubx3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1605829926]
-position = Vector2(-12.500029, -297.49997)
+position = Vector2(0, -48)
 enabled = false
 zoom = Vector2(2, 2)
