@@ -382,8 +382,7 @@ shape = SubResource("RectangleShape2D_j0eya")
 visible = false
 
 [node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
-position = Vector2(943, 214)
-fire_rate = 0.5
+position = Vector2(642, -751)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
@@ -410,6 +409,10 @@ material = SubResource("ShaderMaterial_i6gkg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")

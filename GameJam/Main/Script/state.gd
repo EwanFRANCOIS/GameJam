@@ -10,9 +10,9 @@ var can_transition : bool = false
 
 func _ready():
 	set_physics_process(false)
-	duration.timeout.connect(_on_duration_tiemout())
+	duration.timeout.connect(_on_duration_timeout)
 
-func _on_duration_tiemout():
+func _on_duration_timeout():
 	can_transition = true;
 
 func enter():
