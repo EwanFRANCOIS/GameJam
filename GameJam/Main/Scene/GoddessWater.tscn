@@ -1,22 +1,25 @@
 [gd_scene format=3 uid="uid://c4n0ipmt4kbpt"]
 
-[ext_resource type="Texture2D" uid="uid://be0knf8kfap3l" path="res://Main/Textures/nina.png" id="1_fvbq4"]
+[ext_resource type="Texture2D" uid="uid://drknpvarl5gic" path="res://Main/Textures/GoddessWater.png" id="1_fvbq4"]
 [ext_resource type="Script" uid="uid://xv2kkhslon00" path="res://Main/Script/DEESSE_DIALOGUE.gd" id="2_vb5yx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xubx3"]
-radius = 186.0672
+radius = 790.50006
 
 [node name="NPC_GODDESS" type="Sprite2D" unique_id=828316896]
-position = Vector2(575, 190)
+position = Vector2(562, 305)
+scale = Vector2(0.33, 0.33)
 texture = ExtResource("1_fvbq4")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=986838409]
+position = Vector2(111.5, 42)
 script = ExtResource("2_vb5yx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1807866285]
+position = Vector2(-109.5, 10)
 shape = SubResource("CircleShape2D_xubx3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1605829926]
-position = Vector2(0, 1)
+position = Vector2(-12.500029, -297.49997)
 enabled = false
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(2, 2)
