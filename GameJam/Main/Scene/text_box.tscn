@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://buofgjhqm414k"]
 
 [ext_resource type="Script" uid="uid://cckb3o14s5avi" path="res://Main/Script/text_box.gd" id="1_e32u6"]
+[ext_resource type="AudioStream" uid="uid://4fvyjt2qau4g" path="res://Main/Audio/SFX/freesound_community-pixel-sound-effect-3-82880.mp3" id="2_oii6i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsc4h"]
 bg_color = Color(0, 0, 0, 1)
@@ -11,6 +12,7 @@ border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [node name="TextBox" type="CanvasLayer" unique_id=2139996017]
+layer = 3
 script = ExtResource("1_e32u6")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2044310923]
@@ -55,7 +57,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 30
 text = "KRIS, GET THE BANANA ! "
-autowrap_mode = 1
+autowrap_mode = 3
 clip_text = true
 
 [node name="End" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=784901313]
@@ -64,3 +66,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 30
 text = "v"
+
+[node name="AudioDialogue" type="AudioStreamPlayer2D" parent="." unique_id=1523949204]
+stream = ExtResource("2_oii6i")
+pitch_scale = 7.5

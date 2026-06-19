@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://nvra1w7847ec" path="res://Main/Textures/white-square-2.webp" id="11_3qne0"]
 [ext_resource type="Shader" uid="uid://ck7veq4n1yjt8" path="res://Main/Scene/fogshader.gdshader" id="11_rxnsx"]
 [ext_resource type="Script" uid="uid://4fmtefylaevf" path="res://Main/Scene/fog_overlay.gd" id="12_rxnsx"]
+[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="15_sepy4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -378,9 +379,6 @@ texture = ExtResource("8_j0eya")
 position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_j0eya")
 
-[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
-visible = false
-
 [node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
 position = Vector2(642, -751)
 
@@ -409,13 +407,17 @@ material = SubResource("ShaderMaterial_i6gkg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
 offset_top = -1.0
-offset_right = 2.0
+offset_right = 1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")
 lights = [NodePath("../../MainPerso"), NodePath("../../Map/Light1"), NodePath("../../Map/Fountain")]
+
+[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
+visible = false
+
+[node name="NPC_GODDESS" parent="." unique_id=828316896 instance=ExtResource("15_sepy4")]
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

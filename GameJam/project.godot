@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 
 BgmMenu="*uid://cobbgiqx2ds5l"
 TextBox="*uid://buofgjhqm414k"
+WindSoundAmbiant="*uid://bo73504vc3y1f"
 
 [dotnet]
 
