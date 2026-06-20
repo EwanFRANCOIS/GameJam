@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://buofgjhqm414k"]
+
+[ext_resource type="Script" uid="uid://cckb3o14s5avi" path="res://Main/Script/text_box.gd" id="1_e32u6"]
+[ext_resource type="AudioStream" uid="uid://4fvyjt2qau4g" path="res://Main/Audio/SFX/freesound_community-pixel-sound-effect-3-82880.mp3" id="2_oii6i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsc4h"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="TextBox" type="CanvasLayer" unique_id=2139996017]
+layer = 3
+script = ExtResource("1_e32u6")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2044310923]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -208.0
+offset_right = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=2017539329]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xsc4h")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1356171984]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Panel" type="Panel" parent="MarginContainer/MarginContainer" unique_id=2095381236]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1226639440]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=434617442]
+custom_minimum_size = Vector2(7, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "*"
+
+[node name="Text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=511663695]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "KRIS, GET THE BANANA ! "
+autowrap_mode = 3
+clip_text = true
+
+[node name="End" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=784901313]
+custom_minimum_size = Vector2(7, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "v"
+
+[node name="AudioDialogue" type="AudioStreamPlayer2D" parent="." unique_id=1523949204]
+stream = ExtResource("2_oii6i")
+pitch_scale = 7.5

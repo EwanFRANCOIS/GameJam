@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cbf8cas4cwv8b" path="res://Main/Textures/Pixelated tree sprites/Snow tree.png" id="14_i8kwe"]
 [ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="15_li0qw"]
 [ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="16_ebisl"]
+[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="15_sepy4"]
+[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_li0qw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -471,6 +473,104 @@ position = Vector2(2034, -261)
 bullets_per_wave = 0
 fire_rate = 0.5
 
+[node name="Building2" type="StaticBody2D" parent="Map" unique_id=2125811761]
+position = Vector2(588, -354)
+rotation = 1.5675403
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building2" unique_id=1552462291]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building2" unique_id=505043590]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building3" type="StaticBody2D" parent="Map" unique_id=1565436896]
+position = Vector2(1380, 281)
+rotation = 3.1350806
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building3" unique_id=358065679]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building3" unique_id=1044196802]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building4" type="StaticBody2D" parent="Map" unique_id=365708728]
+position = Vector2(575, 1072.9999)
+rotation = 4.6918907
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building4" unique_id=542486460]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building4" unique_id=786139935]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building5" type="StaticBody2D" parent="Map" unique_id=2094237251]
+position = Vector2(5, 840)
+rotation = -0.78861684
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building5" unique_id=1979503212]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building5" unique_id=943155316]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building6" type="StaticBody2D" parent="Map" unique_id=1488743099]
+position = Vector2(63, -195)
+rotation = 0.77892345
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building6" unique_id=864733874]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building6" unique_id=657218219]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building7" type="StaticBody2D" parent="Map" unique_id=123647994]
+position = Vector2(1138.0001, -181.99994)
+rotation = 2.3464637
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building7" unique_id=1545510024]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building7" unique_id=628543698]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building8" type="StaticBody2D" parent="Map" unique_id=619477087]
+position = Vector2(1165.0001, 853.0002)
+rotation = 3.9032738
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building8" unique_id=663637924]
+position = Vector2(0.5, 0.25)
+scale = Vector2(0.75581396, 1.5615385)
+texture = ExtResource("8_j0eya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building8" unique_id=2130624966]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
+position = Vector2(642, -751)
+
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
 [node name="MonsterTemplate" type="CharacterBody2D" parent="." unique_id=1006290647]
@@ -496,6 +596,9 @@ material = SubResource("ShaderMaterial_i6gkg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")
@@ -591,5 +694,15 @@ offset_right = 86.92307
 offset_bottom = 155.63158
 scale = Vector2(5.786307, 4.6911454)
 text = "[1]"
+
+[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
+visible = false
+
+[node name="NPC_GODDESS" parent="." unique_id=828316896 instance=ExtResource("15_sepy4")]
+position = Vector2(576, 143)
+
+[node name="NPC_MARCHAND" parent="." unique_id=231301137 instance=ExtResource("16_li0qw")]
+position = Vector2(1003, 303)
+scale = Vector2(0.8, 0.8)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

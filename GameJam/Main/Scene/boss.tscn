@@ -1,21 +1,64 @@
 [gd_scene format=3 uid="uid://ejbpy0fbnvsb"]
 
-[ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://main/Script/boss.gd" id="1_u3jhw"]
+[ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://Main/Script/boss.gd" id="1_u3jhw"]
 [ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="2_j5g6d"]
 [ext_resource type="PackedScene" uid="uid://ung22ovgqukk" path="res://Main/Scene/bullet.tscn" id="2_rs1ry"]
+[ext_resource type="Script" uid="uid://ba4y0cyvfo2q8" path="res://Main/Scene/finit_state_machine.gd" id="4_td8lg"]
+[ext_resource type="Script" uid="uid://byiwe7judy4e5" path="res://Main/Script/idle.gd" id="5_fnanp"]
+[ext_resource type="Script" uid="uid://cqjdvsvonb7g8" path="res://Main/Script/5_leaf.gd" id="6_yrp6c"]
+[ext_resource type="Script" uid="uid://c180cxb28yep6" path="res://Main/Script/4_leaf.gd" id="7_6lre0"]
+[ext_resource type="Script" uid="uid://dqb1yk0ixqx8s" path="res://Main/Script/3_leaf.gd" id="8_yrp6c"]
+[ext_resource type="Script" uid="uid://djqkovs54fl0v" path="res://Main/Script/2_leaf.gd" id="9_yrp6c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1ry"]
-size = Vector2(224, 225)
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5g6d"]
 
-[node name="Boss" type="CharacterBody2D" unique_id=1258479015]
+[node name="Boss" type="CharacterBody2D" unique_id=398423175]
+position = Vector2(500, 300)
 script = ExtResource("1_u3jhw")
-bullet_scene = ExtResource("2_rs1ry")
+bullet_node = ExtResource("2_rs1ry")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=806171250]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713524164]
+position = Vector2(4.000004, -3.0000038)
+scale = Vector2(0.4911111, 0.48222223)
 texture = ExtResource("2_j5g6d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446635468]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_rs1ry")
+[node name="Speed" type="Timer" parent="." unique_id=1649513388]
+wait_time = 0.15
 
-[node name="ShootTimer" type="Timer" parent="." unique_id=928748952]
+[node name="Duration" type="Timer" parent="." unique_id=2132557526]
+wait_time = 10.0
+
+[node name="Debug" type="Label" parent="." unique_id=1884638248]
+offset_left = -24.0
+offset_top = -89.0
+offset_right = 26.0
+offset_bottom = -66.0
+text = "Debug"
+
+[node name="PlayerDetection" type="Area2D" parent="." unique_id=1502280011]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=1107833946]
+unique_name_in_owner = true
+scale = Vector2(50, 50)
+shape = SubResource("CircleShape2D_j5g6d")
+
+[node name="FinitStateMachine" type="Node2D" parent="." unique_id=1330726776]
+script = ExtResource("4_td8lg")
+
+[node name="Idle" type="Node2D" parent="FinitStateMachine" unique_id=684790333]
+script = ExtResource("5_fnanp")
+
+[node name="5leaf" type="Node2D" parent="FinitStateMachine" unique_id=1648213948]
+script = ExtResource("6_yrp6c")
+
+[node name="4leaf" type="Node2D" parent="FinitStateMachine" unique_id=1658056054]
+script = ExtResource("7_6lre0")
+
+[node name="3leaf" type="Node2D" parent="FinitStateMachine" unique_id=22430079]
+script = ExtResource("8_yrp6c")
+
+[node name="2leaf" type="Node2D" parent="FinitStateMachine" unique_id=645575575]
+script = ExtResource("9_yrp6c")
+
+[connection signal="timeout" from="Speed" to="." method="_on_speed_timeout"]
+[connection signal="body_entered" from="PlayerDetection" to="FinitStateMachine/Idle" method="_on_player_entered"]
