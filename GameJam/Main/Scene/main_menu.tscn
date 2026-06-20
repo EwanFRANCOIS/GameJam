@@ -71,12 +71,12 @@ text = "QUITTER"
 
 [node name="Label" type="Label" parent="." unique_id=1499471879]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 102.0
-offset_right = 291.0
-offset_bottom = 144.0
+offset_left = 162.0
+offset_top = 99.0
+offset_right = 320.0
+offset_bottom = 141.0
 theme_override_font_sizes/font_size = 30
-text = "[TITRE]"
+text = "Aix-In-Mud"
 
 [connection signal="pressed" from="Button_Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="Button_Classement" to="." method="_on_classement_pressed"]

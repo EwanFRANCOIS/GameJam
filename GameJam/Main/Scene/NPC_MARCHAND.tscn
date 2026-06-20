@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d3iibxnpxpsbe"]
+
+[ext_resource type="Texture2D" uid="uid://uhudjscrfk0j" path="res://Main/Textures/FUBUKI_MARCHAND.png" id="1_rpqp6"]
+[ext_resource type="Script" uid="uid://bjpfty41cswpq" path="res://Main/Script/npc_marchand.gd" id="2_csrm7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swpd7"]
+radius = 215.11392
+
+[node name="NPC_MARCHAND" type="Sprite2D" unique_id=231301137]
+texture = ExtResource("1_rpqp6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=494333005]
+script = ExtResource("2_csrm7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=175920450]
+shape = SubResource("CircleShape2D_swpd7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=362028258]
+zoom = Vector2(2, 2)

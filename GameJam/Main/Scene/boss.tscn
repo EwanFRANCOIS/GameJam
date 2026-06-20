@@ -23,7 +23,7 @@ scale = Vector2(0.4911111, 0.48222223)
 texture = ExtResource("2_j5g6d")
 
 [node name="Speed" type="Timer" parent="." unique_id=1649513388]
-wait_time = 0.05
+wait_time = 0.15
 
 [node name="Duration" type="Timer" parent="." unique_id=2132557526]
 wait_time = 10.0
