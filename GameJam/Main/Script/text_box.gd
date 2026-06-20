@@ -22,6 +22,7 @@ enum STATE {
 var current_state = STATE.READY
 
 func _ready():
+	AudioDialogue.process_mode = Node.PROCESS_MODE_ALWAYS
 	hideTextBox()
 
 func _process(delta):
@@ -65,8 +66,8 @@ func displayText():
 	
 	tween = create_tween()
 	tween.tween_property(labelText, "visible_ratio", 1.0, len(nextText) * CHAR_READ_RATE).from(0.0)
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	
-	# Le bruit de la deesse quand elle parle
 	for i in range(len(nextText)):
 		var temp_declenchement = i * CHAR_READ_RATE
 		if (nextText[i] != " "):

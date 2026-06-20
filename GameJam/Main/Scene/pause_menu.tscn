@@ -12,15 +12,10 @@ func _ready() -> void:
 func _input(event : InputEvent) -> void:
 	if (Input.is_action_just_pressed(\"Escape(Menu)\")):
 		if (get_tree().paused):
-			visible = false
-			get_tree().paused = false
+			_on_continuer_pressed()
 		else:
 			visible = true
 			get_tree().paused = true
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_continuer_pressed() -> void:
@@ -64,9 +59,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0.4117647)
 
 [node name="Button_Continuer" type="Button" parent="ColorRect" unique_id=210959243]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -85,6 +82,7 @@ text = "CONTINUER
 "
 
 [node name="Button_Retour_Menu" type="Button" parent="ColorRect" unique_id=1357758843]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

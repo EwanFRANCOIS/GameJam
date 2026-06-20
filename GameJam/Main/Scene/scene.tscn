@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b0xi7pl8uw0mk" path="res://Main/Textures/walkingPaletteLef.png" id="5_2irwo"]
 [ext_resource type="Shader" uid="uid://dbasm1whnfeld" path="res://Main/Scene/grass.gdshader" id="6_i8kwe"]
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
-[ext_resource type="Texture2D" uid="uid://drknpvarl5gic" path="res://Main/Textures/GoddessWater.png" id="7_ebisl"]
+[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="7_apvie"]
 [ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="8_gg5i3"]
 [ext_resource type="Script" uid="uid://dm7yulvs581f0" path="res://Main/Scene/monster_template.gd" id="9_3qne0"]
 [ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
@@ -15,8 +15,9 @@
 [ext_resource type="Script" uid="uid://4fmtefylaevf" path="res://Main/Scene/fog_overlay.gd" id="12_rxnsx"]
 [ext_resource type="Texture2D" uid="uid://cbf8cas4cwv8b" path="res://Main/Textures/Pixelated tree sprites/Snow tree.png" id="14_i8kwe"]
 [ext_resource type="PackedScene" uid="uid://umna314o7tp7" path="res://Main/Scene/Barre_de_vie.tscn" id="15_sepy4"]
+[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_li0qw"]
 [ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="17_li0qw"]
-[ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
+[ext_resource type="Script" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -561,23 +562,15 @@ shape = SubResource("RectangleShape2D_j0eya")
 position = Vector2(-1, 1)
 metadata/light_radius = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Map/Fountain" unique_id=320991243]
-z_index = 5
-position = Vector2(-2.9062135, -82.24996)
-scale = Vector2(-0.21891376, 0.23121946)
-texture = ExtResource("7_ebisl")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fountain" unique_id=1820571974]
 position = Vector2(-1.9738464, 1.7319946)
 rotation = -1.5862653
 scale = Vector2(6.2366114, 8.983148)
 shape = SubResource("RectangleShape2D_ebisl")
 
-[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
-visible = false
-
-[node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
-position = Vector2(2087, -465)
+[node name="NPC_GODDESS" parent="Map/Fountain" unique_id=828316896 instance=ExtResource("7_apvie")]
+position = Vector2(-2.906, -82.25)
+scale = Vector2(-0.219, 0.231)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
@@ -723,5 +716,16 @@ layer = 2
 [node name="Barre_de_vie" parent="Barre_de_vie" unique_id=2119586583 instance=ExtResource("15_sepy4")]
 z_index = 10
 position = Vector2(-24, -21)
+
+[node name="NPC_MARCHAND" parent="." unique_id=231301137 instance=ExtResource("16_li0qw")]
+position = Vector2(1016, 476)
+scale = Vector2(0.8, 0.8)
+
+[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
+layer = 100
+visible = false
+
+[node name="Boss" parent="." unique_id=398423175 instance=ExtResource("8_gg5i3")]
+position = Vector2(2137, -487)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

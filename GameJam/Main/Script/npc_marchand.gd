@@ -20,8 +20,8 @@ func _ready():
 	TextBox.text_queue_completed.connect(func():
 		if (camera_MARCHAND.enabled):
 			camera_MARCHAND.enabled = false
-			$"../../MainPerso/Camera2D".enabled = true
-			$"../../MainPerso/Camera2D".make_current())
+			get_node("/root/Scene/MainPerso/Camera2D").enabled = true
+			get_node("/root/Scene/MainPerso/Camera2D").make_current())
 
 func _process(_delta):
 	if (player_in_range and Input.is_action_just_pressed("Interact")):
@@ -30,9 +30,9 @@ func _process(_delta):
 
 func declencher_dialogue():
 	if (TextBox.current_state == TextBox.STATE.READY):
-		$"../../MainPerso/Camera2D".enabled = false
-		camera_MARCHAND.make_current()
+		get_node("/root/Scene/MainPerso/Camera2D").enabled = false
 		camera_MARCHAND.enabled = true
+		camera_MARCHAND.make_current()
 		TextBox.queue_text("Si c'est pour mon argent, partez ! J'ai déjà tout perdu !")
 		TextBox.queue_text("...")
 		TextBox.queue_text("...")
@@ -48,6 +48,6 @@ func declencher_dialogue():
 		TextBox.queue_text("n'ai")
 		TextBox.queue_text("aucun")
 		TextBox.queue_text("sous !")
-		TextBox.queue_text("Mais j'ai vraiment beaucoup d'artefacts ou d'autres objets pour toi, bien évidemment, ils ne seront pas gratuits, mais vu tous les propos que la déesse a pu dire sur toi, je me dois de t'offrir cet arrosoir !")
+		TextBox.queue_text("Mais j'ai beaucoup d'artefacts ou d'autres objets pour toi. Évidemment, ils ne seront pas gratuits, mais vu tous les propos que la déesse a pu dire sur toi, je me dois de t'offrir cet arrosoir !")
 		TextBox.queue_text("Et si tu veux bien, avant d'accéder à mes articles, j'aimerais bien que tu te débarrasses de la chose en haut pour moi, je ne sais pas me battre et j'ai beaucoup trop peur de ce truc.")
 		TextBox.queue_text("Il est coriace mais je sais que tu vas y arriver, et aussi profite-en pour nettoyer les arbres aux alentours, ça nous enlèvera cette brume horrible !")

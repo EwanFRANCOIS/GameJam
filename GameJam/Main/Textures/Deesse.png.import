@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drknpvarl5gic"
-path="res://.godot/imported/GoddessWater.png-ac3611b749d51611557c66ed2a468fc8.ctex"
+uid="uid://dn5do3pcy024p"
+path="res://.godot/imported/Deesse.png-a26e8a96fcd6431958efe7fc39fcaa7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/Textures/GoddessWater.png"
-dest_files=["res://.godot/imported/GoddessWater.png-ac3611b749d51611557c66ed2a468fc8.ctex"]
+source_file="res://Main/Textures/Deesse.png"
+dest_files=["res://.godot/imported/Deesse.png-a26e8a96fcd6431958efe7fc39fcaa7c.ctex"]
 
 [params]
 

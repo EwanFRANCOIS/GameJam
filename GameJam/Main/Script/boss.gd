@@ -5,7 +5,6 @@ var theta: float = 0.0
 
 @export var bullet_node: PackedScene
 
-
 func get_vector(angle):
 	theta = angle + alpha
 	return Vector2(cos(theta), sin(theta))

@@ -12,6 +12,7 @@ border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [node name="TextBox" type="CanvasLayer" unique_id=2139996017]
+process_mode = 3
 layer = 3
 script = ExtResource("1_e32u6")
 
@@ -67,6 +68,7 @@ size_flags_vertical = 8
 theme_override_font_sizes/font_size = 30
 text = "v"
 
-[node name="AudioDialogue" type="AudioStreamPlayer2D" parent="." unique_id=1523949204]
+[node name="AudioDialogue" type="AudioStreamPlayer" parent="." unique_id=399734054]
+process_mode = 3
 stream = ExtResource("2_oii6i")
 pitch_scale = 7.5

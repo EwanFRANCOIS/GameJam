@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4n0ipmt4kbpt"]
 
-[ext_resource type="Texture2D" uid="uid://drknpvarl5gic" path="res://Main/Textures/GoddessWater.png" id="1_fvbq4"]
+[ext_resource type="Texture2D" uid="uid://dn5do3pcy024p" path="res://Main/Textures/Deesse.png" id="1_fvbq4"]
 [ext_resource type="Script" uid="uid://xv2kkhslon00" path="res://Main/Script/DEESSE_DIALOGUE.gd" id="2_vb5yx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xubx3"]

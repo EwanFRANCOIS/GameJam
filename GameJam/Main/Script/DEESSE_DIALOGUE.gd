@@ -20,8 +20,8 @@ func _ready():
 	TextBox.text_queue_completed.connect(func():
 		if (camera_DEESSE.enabled):
 			camera_DEESSE.enabled = false
-			$"../../MainPerso/Camera2D".enabled = true
-			$"../../MainPerso/Camera2D".make_current())
+			get_node("/root/Scene/MainPerso/Camera2D").enabled = true
+			get_node("/root/Scene/MainPerso/Camera2D").make_current())
 
 func _process(_delta):
 	if (player_in_range and Input.is_action_just_pressed("Interact")):
@@ -29,9 +29,9 @@ func _process(_delta):
 
 func declencher_dialogue():
 	if (TextBox.current_state == TextBox.STATE.READY):
-		$"../../MainPerso/Camera2D".enabled = false
-		camera_DEESSE.make_current()
+		get_node("/root/Scene/MainPerso/Camera2D").enabled = false
 		camera_DEESSE.enabled = true
+		camera_DEESSE.make_current()
 		TextBox.queue_text("Âme perdue...")
 		TextBox.queue_text("Tu as entendu mes larmes ainsi que ma souffrance...")
 		TextBox.queue_text("Je crains que tu sois la seule encore libre de ce monde maintenant corrompu par toutes ces abominations qui ont fait perdre à notre ville son eau d'autant...")

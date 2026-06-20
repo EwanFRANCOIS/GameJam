@@ -2,5 +2,17 @@ res://Main/Scene/scene.tscn
 res://Main/Scene/grass.gdshader
 res://Main/Scene/fogshader.gdshader
 res://Main/Materials/Pause_Menu.gdshader
+res://Main/Script/DEESSE_DIALOGUE.gd
 res://Main/Scene/NPC_MARCHAND.tscn
+res://Main/Script/npc_marchand.gd
+res://Main/Scene/pause_menu.tscn
+res://Main/Scene/boss.tscn
+res://Main/Script/5_leaf.gd
+res://Main/Script/2_leaf.gd
+res://Main/Script/boss.gd
+res://Main/Script/BOSS_MUSIC.gd
+res://Main/Scene/text_box.tscn
 res://Main/Scene/GoddessWater.tscn
+res://Main/Script/pause_menu.gd
+res://Main/Scene/boss_music.tscn
+res://Main/Script/text_box.gd
