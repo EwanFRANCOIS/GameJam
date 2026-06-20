@@ -18,6 +18,54 @@ var cooldownDash_timer = 0.0
 
 var lastMoveDir = ""
 
+var AllSkills : Array[String] = ["Watering can", "Heal"]
+var inventorySKills : Array[String] = ["Watering can", "Heal"]
+var inCooldownSkills : Array[String] = []
+
+func useSkill(skillName : String):
+	if inventorySKills.find(skillName) != -1:
+		if inCooldownSkills.find(skillName) == -1:
+			# We own the skill and it's not in cooldown
+			# Add skill to cooldown
+			inCooldownSkills.append(skillName)
+			# Use skill (icon)
+			var sprite = $SkillEfect/Sprite2D
+			if skillName == "Watering can":
+				sprite.texture = load("res://Main/Textures/wateringCan.png")
+			await get_tree().create_timer(1.0).timeout # cooldown de 1 seconde
+			sprite.texture = null
+			# Use skill (code)
+			var racineNode = owner
+			
+			if skillName == "Watering can":
+				var natureLife = racineNode.get_node("NatureLife")
+				for life : StaticBody2D in natureLife.get_children():
+					var distance = life.get_node("CollisionShape2D").global_position.distance_to(global_position)
+					if distance < 160:
+						life.get_node("Sprite2D").texture = load("res://Main/Textures/Pixelated tree sprites/Pink tree.png")
+						racineNode.get_node("Fogs/FogOverlay").lights.append(life)
+			
+			# Cooldown
+			if skillName == "Watering can":
+				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/Skill1")
+				var cooldown : float = 5.0 # cooldown de 5 secondes
+				skillNode.temps_cooldown_total = cooldown
+				skillNode.lancer_cooldown()
+				for i in range(cooldown):
+					skillNode.get_node("Label").text = str(cooldown-i)
+					await get_tree().create_timer(1.0).timeout
+				skillNode.get_node("Label").text = ""
+			
+			# Remove skill from cooldown
+			inCooldownSkills.remove_at(inCooldownSkills.find(skillName))
+
+func checkSkills():
+	# call_deferred execute la fonction en parallele
+	if Input.is_action_pressed("skill1"):
+		useSkill.call_deferred(AllSkills[0])
+	elif Input.is_action_pressed("skill2"):
+		useSkill.call_deferred(AllSkills[1])
+
 func _ready() -> void:
 	pass
 
@@ -135,5 +183,7 @@ func _physics_process(delta: float) -> void:
 	animPerso()
 	# Dash Effect
 	dashEffect(delta)
+	# Skills
+	checkSkills()
 	# Movement
 	move_and_slide()
