@@ -1,4 +1,6 @@
 res://Main/Scene/scene.tscn
-res://Main/Materials/Pause_Menu.gdshader
-res://Main/Scene/fogshader.gdshader
 res://Main/Scene/grass.gdshader
+res://Main/Scene/fogshader.gdshader
+res://Main/Materials/Pause_Menu.gdshader
+res://Main/Scene/NPC_MARCHAND.tscn
+res://Main/Scene/GoddessWater.tscn

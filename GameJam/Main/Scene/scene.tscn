@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b0xi7pl8uw0mk" path="res://Main/Textures/walkingPaletteLef.png" id="5_2irwo"]
 [ext_resource type="Shader" uid="uid://dbasm1whnfeld" path="res://Main/Scene/grass.gdshader" id="6_i8kwe"]
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
-[ext_resource type="Texture2D" uid="uid://b4274dgfcyyqy" path="res://Main/Textures/NicePng_white-fade-png_1992542.png" id="7_npqbt"]
+[ext_resource type="Texture2D" uid="uid://drknpvarl5gic" path="res://Main/Textures/GoddessWater.png" id="7_ebisl"]
 [ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="8_gg5i3"]
 [ext_resource type="Script" uid="uid://dm7yulvs581f0" path="res://Main/Scene/monster_template.gd" id="9_3qne0"]
 [ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Shader" uid="uid://ck7veq4n1yjt8" path="res://Main/Scene/fogshader.gdshader" id="11_rxnsx"]
 [ext_resource type="Script" uid="uid://4fmtefylaevf" path="res://Main/Scene/fog_overlay.gd" id="12_rxnsx"]
 [ext_resource type="Texture2D" uid="uid://cbf8cas4cwv8b" path="res://Main/Textures/Pixelated tree sprites/Snow tree.png" id="14_i8kwe"]
+[ext_resource type="PackedScene" uid="uid://umna314o7tp7" path="res://Main/Scene/Barre_de_vie.tscn" id="15_sepy4"]
 [ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="17_li0qw"]
 [ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
 
@@ -191,6 +192,9 @@ shader_parameter/grass_details = 7.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0eya"]
 size = Vector2(195.75, 305)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebisl"]
+size = Vector2(23.179613, 20)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3qne0"]
 animations = [{
 "frames": [{
@@ -224,7 +228,7 @@ shader_parameter/fog_speed = Vector2(0.045, 0.065)
 
 [node name="MainPerso" type="CharacterBody2D" parent="." unique_id=1589632525]
 material = SubResource("ShaderMaterial_j0eya")
-position = Vector2(575, 327)
+position = Vector2(573, 482)
 scale = Vector2(1.0016477, 0.9767928)
 script = ExtResource("2_63ixx")
 metadata/light_radius = 0.6
@@ -558,15 +562,16 @@ position = Vector2(-1, 1)
 metadata/light_radius = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/Fountain" unique_id=320991243]
-position = Vector2(7.6293945e-06, 3.0517578e-05)
-scale = Vector2(-0.3887954, 0.41581225)
-texture = ExtResource("7_npqbt")
+z_index = 5
+position = Vector2(-2.9062135, -82.24996)
+scale = Vector2(-0.21891376, 0.23121946)
+texture = ExtResource("7_ebisl")
 
-[node name="Light1" type="Sprite2D" parent="Map" unique_id=1964370539]
-position = Vector2(1042.9667, -116.40619)
-scale = Vector2(-0.0355438, 0.03474105)
-texture = ExtResource("11_3qne0")
-metadata/light_radius = 0.3
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fountain" unique_id=1820571974]
+position = Vector2(-1.9738464, 1.7319946)
+rotation = -1.5862653
+scale = Vector2(6.2366114, 8.983148)
+shape = SubResource("RectangleShape2D_ebisl")
 
 [node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
 visible = false
@@ -602,7 +607,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")
-lights = [NodePath("../../MainPerso"), NodePath("../../Map/Light1"), NodePath("../../Map/Fountain")]
+lights = [NodePath("../../MainPerso"), NodePath("../../Map/Fountain")]
 
 [node name="NatureLife" type="Node2D" parent="." unique_id=962910417]
 
@@ -654,6 +659,22 @@ position = Vector2(1, 125)
 scale = Vector2(5.1405478, 5.0004926)
 shape = SubResource("CircleShape2D_sepy4")
 
+[node name="Tree4" type="StaticBody2D" parent="NatureLife" unique_id=270199724]
+position = Vector2(2233, -967)
+metadata/light_radius = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree4" unique_id=558030583]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(-1.9082947, 3.9039307)
+scale = Vector2(0.032149002, 0.037354335)
+texture = ExtResource("14_i8kwe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree4" unique_id=1169631323]
+position = Vector2(1, 125)
+scale = Vector2(5.1405478, 5.0004926)
+shape = SubResource("CircleShape2D_sepy4")
+
 [node name="SkillUI" type="Control" parent="." unique_id=569341588]
 layout_mode = 3
 anchors_preset = 0
@@ -665,9 +686,10 @@ scale = Vector2(1.6853212, 1.6953222)
 layer = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="SkillUI/CanvasLayer" unique_id=1730782676]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.37356323, 0.36190477)
+offset_top = 59.000008
+offset_right = 239.0
+offset_bottom = 298.0
+scale = Vector2(0.2393112, 0.24597374)
 
 [node name="Skill1" type="TextureProgressBar" parent="SkillUI/CanvasLayer/MarginContainer" unique_id=1627798718]
 layout_mode = 2
@@ -694,5 +716,12 @@ offset_right = 86.92307
 offset_bottom = 155.63158
 scale = Vector2(5.786307, 4.6911454)
 text = "[1]"
+
+[node name="Barre_de_vie" type="CanvasLayer" parent="." unique_id=808598016]
+layer = 2
+
+[node name="Barre_de_vie" parent="Barre_de_vie" unique_id=2119586583 instance=ExtResource("15_sepy4")]
+z_index = 10
+position = Vector2(-24, -21)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]
