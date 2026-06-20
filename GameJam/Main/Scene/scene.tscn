@@ -14,10 +14,8 @@
 [ext_resource type="Shader" uid="uid://ck7veq4n1yjt8" path="res://Main/Scene/fogshader.gdshader" id="11_rxnsx"]
 [ext_resource type="Script" uid="uid://4fmtefylaevf" path="res://Main/Scene/fog_overlay.gd" id="12_rxnsx"]
 [ext_resource type="Texture2D" uid="uid://cbf8cas4cwv8b" path="res://Main/Textures/Pixelated tree sprites/Snow tree.png" id="14_i8kwe"]
-[ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="15_li0qw"]
-[ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="16_ebisl"]
-[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="15_sepy4"]
-[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_li0qw"]
+[ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="17_li0qw"]
+[ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
@@ -346,8 +344,8 @@ position = Vector2(-0.125, 0.5)
 shape = SubResource("RectangleShape2D_j0eya")
 
 [node name="Building12" type="StaticBody2D" parent="Map" unique_id=829177850]
-position = Vector2(590.99994, -303.99997)
-rotation = -0.48331255
+position = Vector2(628.90497, -566.40607)
+rotation = -2.0410342
 scale = Vector2(0.8420869, 1.45747)
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/Building12" unique_id=1600997016]
@@ -357,6 +355,111 @@ scale = Vector2(0.32666668, 0.50833327)
 texture = ExtResource("11_3qne0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building12" unique_id=1965668742]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building13" type="StaticBody2D" parent="Map" unique_id=1798392463]
+position = Vector2(879.6857, -827.34344)
+rotation = -2.7233129
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building13" unique_id=2058169000]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building13" unique_id=1490444111]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building16" type="StaticBody2D" parent="Map" unique_id=2009122739]
+position = Vector2(1112.4979, -1074.9994)
+rotation = -1.5149593
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building16" unique_id=418321558]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building16" unique_id=1809047017]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building17" type="StaticBody2D" parent="Map" unique_id=932741836]
+position = Vector2(1538.2783, -384.3748)
+rotation = -2.6850328
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building17" unique_id=180790248]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building17" unique_id=1078958288]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building18" type="StaticBody2D" parent="Map" unique_id=1656620179]
+position = Vector2(1399.9973, -994.5308)
+rotation = -4.0461
+scale = Vector2(0.8420869, 0.9361481)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building18" unique_id=1853121759]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building18" unique_id=250219089]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building19" type="StaticBody2D" parent="Map" unique_id=813944825]
+position = Vector2(1560.1531, -730.4685)
+rotation = -3.4719927
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building19" unique_id=712871982]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building19" unique_id=2011267951]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building14" type="StaticBody2D" parent="Map" unique_id=1982302936]
+position = Vector2(910.93567, -149.99994)
+rotation = -2.0410342
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building14" unique_id=1399534442]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building14" unique_id=1728356069]
+position = Vector2(-0.125, 0.5)
+shape = SubResource("RectangleShape2D_j0eya")
+
+[node name="Building15" type="StaticBody2D" parent="Map" unique_id=1558104086]
+position = Vector2(1290.6226, -235.93741)
+rotation = -1.5426561
+scale = Vector2(0.8420869, 1.45747)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Building15" unique_id=1875738201]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(9.655952e-06, 0.49998525)
+scale = Vector2(0.32666668, 0.50833327)
+texture = ExtResource("11_3qne0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building15" unique_id=427424821]
 position = Vector2(-0.125, 0.5)
 shape = SubResource("RectangleShape2D_j0eya")
 
@@ -469,107 +572,7 @@ metadata/light_radius = 0.3
 visible = false
 
 [node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
-position = Vector2(2034, -261)
-bullets_per_wave = 0
-fire_rate = 0.5
-
-[node name="Building2" type="StaticBody2D" parent="Map" unique_id=2125811761]
-position = Vector2(588, -354)
-rotation = 1.5675403
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building2" unique_id=1552462291]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building2" unique_id=505043590]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building3" type="StaticBody2D" parent="Map" unique_id=1565436896]
-position = Vector2(1380, 281)
-rotation = 3.1350806
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building3" unique_id=358065679]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building3" unique_id=1044196802]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building4" type="StaticBody2D" parent="Map" unique_id=365708728]
-position = Vector2(575, 1072.9999)
-rotation = 4.6918907
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building4" unique_id=542486460]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building4" unique_id=786139935]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building5" type="StaticBody2D" parent="Map" unique_id=2094237251]
-position = Vector2(5, 840)
-rotation = -0.78861684
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building5" unique_id=1979503212]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building5" unique_id=943155316]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building6" type="StaticBody2D" parent="Map" unique_id=1488743099]
-position = Vector2(63, -195)
-rotation = 0.77892345
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building6" unique_id=864733874]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building6" unique_id=657218219]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building7" type="StaticBody2D" parent="Map" unique_id=123647994]
-position = Vector2(1138.0001, -181.99994)
-rotation = 2.3464637
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building7" unique_id=1545510024]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building7" unique_id=628543698]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Building8" type="StaticBody2D" parent="Map" unique_id=619477087]
-position = Vector2(1165.0001, 853.0002)
-rotation = 3.9032738
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/Building8" unique_id=663637924]
-position = Vector2(0.5, 0.25)
-scale = Vector2(0.75581396, 1.5615385)
-texture = ExtResource("8_j0eya")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Building8" unique_id=2130624966]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_j0eya")
-
-[node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
-position = Vector2(642, -751)
+position = Vector2(2087, -465)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
@@ -596,9 +599,6 @@ material = SubResource("ShaderMaterial_i6gkg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_rxnsx")
@@ -673,10 +673,10 @@ scale = Vector2(0.37356323, 0.36190477)
 layout_mode = 2
 step = 0.01
 fill_mode = 4
-texture_under = ExtResource("15_li0qw")
-texture_progress = ExtResource("15_li0qw")
+texture_under = ExtResource("17_li0qw")
+texture_progress = ExtResource("17_li0qw")
 tint_progress = Color(0, 0, 0, 0.56078434)
-script = ExtResource("16_ebisl")
+script = ExtResource("18_ebisl")
 
 [node name="Label" type="Label" parent="SkillUI/CanvasLayer/MarginContainer/Skill1" unique_id=975144708]
 layout_mode = 0
@@ -694,15 +694,5 @@ offset_right = 86.92307
 offset_bottom = 155.63158
 scale = Vector2(5.786307, 4.6911454)
 text = "[1]"
-
-[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
-visible = false
-
-[node name="NPC_GODDESS" parent="." unique_id=828316896 instance=ExtResource("15_sepy4")]
-position = Vector2(576, 143)
-
-[node name="NPC_MARCHAND" parent="." unique_id=231301137 instance=ExtResource("16_li0qw")]
-position = Vector2(1003, 303)
-scale = Vector2(0.8, 0.8)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]
