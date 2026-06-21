@@ -8,6 +8,7 @@
 radius = 790.50006
 
 [node name="NPC_GODDESS" type="Sprite2D" unique_id=828316896]
+visible = false
 position = Vector2(562, 305)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_fvbq4")

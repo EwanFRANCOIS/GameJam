@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfbxg7du34b8q"]
 
 [node name="AFFICHAGE_TOUCHE_F" type="Control" unique_id=2093562685]
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

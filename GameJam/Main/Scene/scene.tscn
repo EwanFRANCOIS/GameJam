@@ -12,15 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://dhafvtw726wto" path="res://Main/Textures/SpriteAnim/left front 4.png" id="6_nnqdb"]
 [ext_resource type="Texture2D" uid="uid://koiycg7nsn1l" path="res://Main/Textures/SpriteAnim/front 4.png" id="6_pvf8k"]
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
+[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="7_apvie"]
 [ext_resource type="Texture2D" uid="uid://di4tml1rxlil7" path="res://Main/Textures/SpriteAnim/front 5.png" id="7_h1sp0"]
 [ext_resource type="Texture2D" uid="uid://dtytpeudh7uwm" path="res://Main/Textures/SpriteAnim/left front 5.png" id="7_hncav"]
-[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="7_apvie"]
 [ext_resource type="Texture2D" uid="uid://63o7jqh4tstd" path="res://Main/Textures/SpriteAnim/left front 6.png" id="8_0071y"]
 [ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="8_gg5i3"]
 [ext_resource type="Texture2D" uid="uid://b83nye0c2q3ic" path="res://Main/Textures/SpriteAnim/front 6.png" id="8_ui4sl"]
 [ext_resource type="Texture2D" uid="uid://q4lp8vro4hs5" path="res://Main/Textures/SpriteAnim/left front 7.png" id="9_2j763"]
 [ext_resource type="Script" uid="uid://dm7yulvs581f0" path="res://Main/Scene/monster_template.gd" id="9_3qne0"]
-[ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3_pause"]
+[ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
 [ext_resource type="Texture2D" uid="uid://bqvp7g5sk4pr6" path="res://Main/Textures/SpriteAnim/front 7.png" id="9_h30id"]
 [ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="9_i6gkg"]
 [ext_resource type="Texture2D" uid="uid://b3jix62etoye3" path="res://Main/Textures/SpriteAnim/front 8.png" id="10_5kuux"]
@@ -43,16 +43,16 @@
 [ext_resource type="Texture2D" uid="uid://mtikn5cujb4l" path="res://Main/Textures/SpriteAnim/right front 5.png" id="15_tji57"]
 [ext_resource type="Texture2D" uid="uid://bbumbwe4n8hsi" path="res://Main/Textures/SpriteAnim/back 4.png" id="16_0qsp8"]
 [ext_resource type="Texture2D" uid="uid://c4dnno1gf70i" path="res://Main/Textures/SpriteAnim/right front 6.png" id="16_6ff8n"]
+[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_li0qw"]
 [ext_resource type="Texture2D" uid="uid://dtuc3xiv51ofx" path="res://Main/Textures/SpriteAnim/left 4.png" id="16_sxawy"]
-[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_marchand"]
 [ext_resource type="Texture2D" uid="uid://df6xpc3xt202p" path="res://Main/Textures/SpriteAnim/back 5.png" id="17_2l12e"]
 [ext_resource type="Texture2D" uid="uid://cwyptdii44dr0" path="res://Main/Textures/SpriteAnim/right front 7.png" id="17_5j6pt"]
 [ext_resource type="Texture2D" uid="uid://bwgairuntpqtt" path="res://Main/Textures/SpriteAnim/left 5.png" id="17_hiam3"]
-[ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="17_li0qw"]
+[ext_resource type="Texture2D" uid="uid://cu53md7ik64wn" path="res://Main/Textures/wateringCan.png" id="17_wateringcan"]
 [ext_resource type="Texture2D" uid="uid://0r5k8kvecx1s" path="res://Main/Textures/SpriteAnim/right front 8.png" id="18_4f08h"]
 [ext_resource type="Texture2D" uid="uid://dnyd0a35euhri" path="res://Main/Textures/SpriteAnim/back 6.png" id="18_20mkn"]
 [ext_resource type="Texture2D" uid="uid://b7u0atgpgls07" path="res://Main/Textures/SpriteAnim/left 6.png" id="18_dtvd6"]
-[ext_resource type="Script" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
+[ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
 [ext_resource type="Texture2D" uid="uid://bdclvn8w3i2r" path="res://Main/Textures/SpriteAnim/left 7.png" id="19_ft8o0"]
 [ext_resource type="Texture2D" uid="uid://bwrsppuk185xi" path="res://Main/Textures/SpriteAnim/back 7.png" id="19_xx708"]
 [ext_resource type="Texture2D" uid="uid://cfkxk7yqxjhfs" path="res://Main/Textures/SpriteAnim/left 8.png" id="20_ubr65"]
@@ -84,11 +84,12 @@
 [ext_resource type="Texture2D" uid="uid://dsa56rxejygk8" path="res://Main/Textures/SpriteAnim/right back 6.png" id="42_fisbs"]
 [ext_resource type="Texture2D" uid="uid://c8y8ifcwdag82" path="res://Main/Textures/SpriteAnim/right back 7.png" id="43_poe4r"]
 [ext_resource type="Texture2D" uid="uid://c6kjcn17vu3if" path="res://Main/Textures/SpriteAnim/right back 8.png" id="44_lhryi"]
-[ext_resource type="Texture2D" uid="uid://bp8mu0ccefurv" path="res://Main/Textures/placeDetruite.png" id="73_qxr7q"]
+[ext_resource type="Texture2D" uid="uid://bp8mu0ccefurv" path="res://Main/Textures/placeDetruite.png" id="74_tji57"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxr7q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg5i3"]
+size = Vector2(35, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hvd3"]
 atlas = ExtResource("3_wdnnd")
@@ -703,8 +704,8 @@ shader_parameter/grass_details = 7.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0eya"]
 size = Vector2(195.75, 305)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxr7q"]
-size = Vector2(33.42569, 20.177084)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebisl"]
+size = Vector2(21.173214, 19.805025)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3qne0"]
 animations = [{
@@ -733,19 +734,15 @@ shader_parameter/light_count = 0
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_3qne0")
 shader_parameter/fog_speed = Vector2(0.045, 0.065)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4fni"]
-size = Vector2(20, 14.598564)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tji57"]
+size = Vector2(15.368013, 9.999016)
 
 [node name="Scene" type="Node2D" unique_id=686424288]
 
 [node name="MainPerso" type="CharacterBody2D" parent="." unique_id=1589632525]
 material = SubResource("ShaderMaterial_j0eya")
-position = Vector2(562.99994, 509.99997)
+position = Vector2(571.99994, 566)
 scale = Vector2(1.0016477, 0.9767928)
-slide_on_ceiling = false
-wall_min_slide_angle = 0.0
-floor_block_on_wall = false
-safe_margin = 0.5
 script = ExtResource("2_63ixx")
 metadata/light_radius = 0.6
 
@@ -756,9 +753,8 @@ is_original = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainPerso/DashEffect" unique_id=1326731295]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPerso" unique_id=1465677659]
-z_index = 5
-position = Vector2(5.990221, 6.142583)
-shape = SubResource("CapsuleShape2D_qxr7q")
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_gg5i3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainPerso" unique_id=1129911304]
 z_index = 1
@@ -785,7 +781,7 @@ offset_left = -7315.0
 offset_top = -6475.0
 offset_right = 9382.0
 offset_bottom = 7798.0
-color = Color(0.22670737, 0.22670755, 0.22670743, 1)
+color = Color(0.048600636, 0.28275764, 0.011640374, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=502411769]
 position = Vector2(577, 328)
@@ -1078,23 +1074,22 @@ shape = SubResource("RectangleShape2D_j0eya")
 position = Vector2(-1, 1)
 metadata/light_radius = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Map/Fountain" unique_id=320991243]
-y_sort_enabled = true
-position = Vector2(-2.9062061, -20.73785)
-scale = Vector2(-0.2771636, 0.35655504)
-texture = ExtResource("73_qxr7q")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fountain" unique_id=1820571974]
-z_index = 10
-position = Vector2(-2.8101807, -8.075073)
+z_index = 5
+position = Vector2(1.1785889, -0.6423645)
 rotation = -1.5862653
-scale = Vector2(5.6076965, 15.877929)
-shape = SubResource("RectangleShape2D_qxr7q")
+scale = Vector2(9.777378, 22.920834)
+shape = SubResource("RectangleShape2D_ebisl")
 
 [node name="NPC_GODDESS" parent="Map/Fountain" unique_id=828316896 instance=ExtResource("7_apvie")]
-visible = false
-position = Vector2(-2.906, -82.25)
+z_index = 10
+position = Vector2(-3.687487, -61.156223)
 scale = Vector2(-0.219, 0.231)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Fountain" unique_id=1275993421]
+position = Vector2(-0.56248665, 0.5625076)
+scale = Vector2(0.40803826, 0.44392702)
+texture = ExtResource("74_tji57")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
@@ -1129,68 +1124,89 @@ lights = [NodePath("../../MainPerso"), NodePath("../../Map/Fountain")]
 [node name="NatureLife" type="Node2D" parent="." unique_id=962910417]
 
 [node name="Tree" type="StaticBody2D" parent="NatureLife" unique_id=1164806106]
-position = Vector2(97, 766)
+position = Vector2(108, 770)
 metadata/light_radius = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree" unique_id=1178172190]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(-3, -111)
+position = Vector2(-3, -105)
 scale = Vector2(0.032149002, 0.037354335)
 texture = ExtResource("14_i8kwe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree" unique_id=1225057523]
-position = Vector2(2, 7.5)
+z_index = 5
+position = Vector2(0.5, 6.000061)
 scale = Vector2(5.1405478, 5.0004926)
-shape = SubResource("RectangleShape2D_p4fni")
+shape = SubResource("RectangleShape2D_tji57")
 
-[node name="Tree2" type="StaticBody2D" parent="NatureLife" unique_id=1977690468]
-position = Vector2(1149, 672)
+[node name="Tree2" type="StaticBody2D" parent="NatureLife" unique_id=1188493681]
+position = Vector2(946, 864)
 metadata/light_radius = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree2" unique_id=701473824]
+[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree2" unique_id=856441429]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(-3, -111)
+position = Vector2(-3, -105)
 scale = Vector2(0.032149002, 0.037354335)
 texture = ExtResource("14_i8kwe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree2" unique_id=1431761464]
-position = Vector2(2, 7.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree2" unique_id=368406264]
+z_index = 5
+position = Vector2(0.5, 6.000061)
 scale = Vector2(5.1405478, 5.0004926)
-shape = SubResource("RectangleShape2D_p4fni")
+shape = SubResource("RectangleShape2D_tji57")
 
-[node name="Tree3" type="StaticBody2D" parent="NatureLife" unique_id=1593826218]
-position = Vector2(699, -249)
+[node name="Tree3" type="StaticBody2D" parent="NatureLife" unique_id=271438180]
+position = Vector2(937, -133)
 metadata/light_radius = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree3" unique_id=649356954]
+[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree3" unique_id=1608350141]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(-3, -111)
+position = Vector2(-3, -105)
 scale = Vector2(0.032149002, 0.037354335)
 texture = ExtResource("14_i8kwe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree3" unique_id=1906087641]
-position = Vector2(2, 7.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree3" unique_id=647053081]
+z_index = 5
+position = Vector2(0.5, 6.000061)
 scale = Vector2(5.1405478, 5.0004926)
-shape = SubResource("RectangleShape2D_p4fni")
+shape = SubResource("RectangleShape2D_tji57")
 
-[node name="Tree4" type="StaticBody2D" parent="NatureLife" unique_id=1182805458]
-position = Vector2(2259, -742)
+[node name="Tree4" type="StaticBody2D" parent="NatureLife" unique_id=1221767241]
+position = Vector2(-28, 129)
 metadata/light_radius = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree4" unique_id=306600765]
+[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree4" unique_id=1646725642]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(-3, -111)
+position = Vector2(-3, -105)
 scale = Vector2(0.032149002, 0.037354335)
 texture = ExtResource("14_i8kwe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree4" unique_id=2146608092]
-position = Vector2(2, 7.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree4" unique_id=772299044]
+z_index = 5
+position = Vector2(0.5, 6.000061)
 scale = Vector2(5.1405478, 5.0004926)
-shape = SubResource("RectangleShape2D_p4fni")
+shape = SubResource("RectangleShape2D_tji57")
+
+[node name="Tree5" type="StaticBody2D" parent="NatureLife" unique_id=1446219253]
+position = Vector2(2190, -778)
+metadata/light_radius = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="NatureLife/Tree5" unique_id=657791871]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(-3, -105)
+scale = Vector2(0.032149002, 0.037354335)
+texture = ExtResource("14_i8kwe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NatureLife/Tree5" unique_id=147965835]
+z_index = 5
+position = Vector2(0.5, 6.000061)
+scale = Vector2(5.1405478, 5.0004926)
+shape = SubResource("RectangleShape2D_tji57")
 
 [node name="SkillUI" type="Control" parent="." unique_id=569341588]
 layout_mode = 3
@@ -1208,19 +1224,16 @@ offset_right = 239.0
 offset_bottom = 298.0
 scale = Vector2(0.2393112, 0.24597374)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SkillUI/CanvasLayer/MarginContainer" unique_id=262522424]
-layout_mode = 2
-
-[node name="Skill1" type="TextureProgressBar" parent="SkillUI/CanvasLayer/MarginContainer/HBoxContainer" unique_id=1627798718]
+[node name="Skill1" type="TextureProgressBar" parent="SkillUI/CanvasLayer/MarginContainer" unique_id=1627798718]
 layout_mode = 2
 step = 0.01
 fill_mode = 4
-texture_under = ExtResource("17_li0qw")
-texture_progress = ExtResource("17_li0qw")
+texture_under = ExtResource("17_wateringcan")
+texture_progress = ExtResource("17_wateringcan")
 tint_progress = Color(0, 0, 0, 0.56078434)
 script = ExtResource("18_ebisl")
 
-[node name="Label" type="Label" parent="SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill1" unique_id=975144708]
+[node name="Label" type="Label" parent="SkillUI/CanvasLayer/MarginContainer/Skill1" unique_id=975144708]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
@@ -1228,7 +1241,7 @@ scale = Vector2(5.786307, 4.6911454)
 text = "
 "
 
-[node name="Label2" type="Label" parent="SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill1" unique_id=1705077837]
+[node name="Label2" type="Label" parent="SkillUI/CanvasLayer/MarginContainer/Skill1" unique_id=1705077837]
 layout_mode = 0
 offset_left = 66.92307
 offset_top = 132.63158

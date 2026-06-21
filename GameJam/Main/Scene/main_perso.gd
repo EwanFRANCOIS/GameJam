@@ -49,23 +49,11 @@ func useSkill(skillName : String):
 					if distance < 160:
 						life.get_node("Sprite2D").texture = load("res://Main/Textures/Pixelated tree sprites/Pink tree.png")
 						racineNode.get_node("Fogs/FogOverlay").lights.append(life)
-			elif skillName == "Watering can":
-				# idk
-				print("heal")
 			
 			# Cooldown
 			if skillName == "Watering can":
-				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill1")
+				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/Skill1")
 				var cooldown : float = 5.0 # cooldown de 5 secondes
-				skillNode.temps_cooldown_total = cooldown
-				skillNode.lancer_cooldown()
-				for i in range(cooldown):
-					skillNode.get_node("Label").text = str(cooldown-i)
-					await get_tree().create_timer(1.0).timeout
-				skillNode.get_node("Label").text = ""
-			elif skillName == "Heal":
-				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill2")
-				var cooldown : float = 15.0 # cooldown de 10 secondes
 				skillNode.temps_cooldown_total = cooldown
 				skillNode.lancer_cooldown()
 				for i in range(cooldown):
