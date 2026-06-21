@@ -6,6 +6,7 @@ extends Area2D
 
 var cinematique_joue : bool = false
 
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
@@ -26,12 +27,17 @@ func _ready():
 			get_node("/root/Scene/MainPerso/Camera2D").enabled = true
 			get_node("/root/Scene/MainPerso/Camera2D").make_current()
 			get_tree().paused = false
+			
+			var boss = get_node_or_null("/root/Scene/Boss")
+			if (not boss):
+				boss = get_node_or_null("/root/Scene/boss")
+			if (boss):
+				boss.combat_commence = true
 	)
 
 func declencherDialogue():
 	if (TextBox.current_state == TextBox.STATE.READY):
 		BOSS_MUSIC.play()
-		STATE_MACHINE.change_state("Idle")
 		get_node("/root/Scene/MainPerso/Camera2D").enabled = false
 		camera_BOSS.enabled = true
 		camera_BOSS.make_current()
@@ -41,3 +47,7 @@ func declencherDialogue():
 		TextBox.queue_text("Je t'ai entendu parler avec l'autre incapable...")
 		TextBox.queue_text("Sache que je suis installé ici depuis bien longtemps.")
 		TextBox.queue_text("Je ne laisserais en aucun cas ma place à une simple vermine comme toi !")
+		
+		var boss = get_node_or_null("../")
+		if (boss and boss.has_node("$../HP_BAR")):
+			boss.get_node("$../HP_BAR").visible = true

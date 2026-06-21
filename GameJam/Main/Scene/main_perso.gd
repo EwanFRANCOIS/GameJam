@@ -28,6 +28,7 @@ func useSkill(skillName : String):
 			# We own the skill and it's not in cooldown
 			# Add skill to cooldown
 			inCooldownSkills.append(skillName)
+			attaquerBoss()
 			# Use skill (icon)
 			var sprite = $SkillEfect/Sprite2D
 			if skillName == "Watering can":
@@ -68,6 +69,14 @@ func checkSkills():
 
 func _ready() -> void:
 	pass
+
+
+func attaquerBoss():
+	var BOSS = get_node_or_null("/root/Scene/Boss")
+	
+	if (BOSS):
+		if (BOSS.has_method("recevoir_Dmg")):
+			BOSS.recevoir_Dmg(10)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	pass # Replace with function body.

@@ -569,6 +569,7 @@ scale = Vector2(6.2366114, 8.983148)
 shape = SubResource("RectangleShape2D_ebisl")
 
 [node name="NPC_GODDESS" parent="Map/Fountain" unique_id=828316896 instance=ExtResource("7_apvie")]
+visible = false
 position = Vector2(-2.906, -82.25)
 scale = Vector2(-0.219, 0.231)
 
@@ -719,7 +720,7 @@ position = Vector2(-24, -21)
 
 [node name="NPC_MARCHAND" parent="." unique_id=231301137 instance=ExtResource("16_li0qw")]
 position = Vector2(1016, 476)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.15, 0.15)
 
 [node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
 layer = 100

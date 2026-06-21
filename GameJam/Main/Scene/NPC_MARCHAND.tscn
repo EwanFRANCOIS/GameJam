@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://d3iibxnpxpsbe"]
 
-[ext_resource type="Texture2D" uid="uid://uhudjscrfk0j" path="res://Main/Textures/FUBUKI_MARCHAND.png" id="1_rpqp6"]
+[ext_resource type="Texture2D" uid="uid://c287btnkwc1uv" path="res://Main/Textures/IMG_0584.png" id="1_swpd7"]
 [ext_resource type="Script" uid="uid://bjpfty41cswpq" path="res://Main/Script/npc_marchand.gd" id="2_csrm7"]
+[ext_resource type="PackedScene" uid="uid://cfbxg7du34b8q" path="res://Main/Scene/affichage_touche_f.tscn" id="3_swpd7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_swpd7"]
-radius = 215.11392
+radius = 905.1691
 
 [node name="NPC_MARCHAND" type="Sprite2D" unique_id=231301137]
-texture = ExtResource("1_rpqp6")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_swpd7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=494333005]
 script = ExtResource("2_csrm7")
@@ -17,3 +19,13 @@ shape = SubResource("CircleShape2D_swpd7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=362028258]
 zoom = Vector2(2, 2)
+
+[node name="PIVOT_UI" type="Node2D" parent="." unique_id=1364859586]
+
+[node name="AFFICHAGE_TOUCHE_F" parent="PIVOT_UI" unique_id=2093562685 instance=ExtResource("3_swpd7")]
+visible = false
+offset_left = -1412.5
+offset_top = -1250.0
+offset_right = -1338.5
+offset_bottom = -1178.0
+scale = Vector2(2.5, 2.5)

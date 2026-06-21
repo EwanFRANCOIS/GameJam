@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dn5do3pcy024p" path="res://Main/Textures/Deesse.png" id="1_fvbq4"]
 [ext_resource type="Script" uid="uid://xv2kkhslon00" path="res://Main/Script/DEESSE_DIALOGUE.gd" id="2_vb5yx"]
+[ext_resource type="PackedScene" uid="uid://cfbxg7du34b8q" path="res://Main/Scene/affichage_touche_f.tscn" id="3_vb5yx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xubx3"]
 radius = 790.50006
@@ -23,3 +24,14 @@ shape = SubResource("CircleShape2D_xubx3")
 position = Vector2(0, -48)
 enabled = false
 zoom = Vector2(2, 2)
+
+[node name="PIVOT_UI2" type="Node2D" parent="." unique_id=1889013600]
+
+[node name="AFFICHAGE_TOUCHE_F" parent="PIVOT_UI2" unique_id=2093562685 instance=ExtResource("3_vb5yx")]
+visible = false
+z_as_relative = false
+offset_left = -1164.0
+offset_top = -272.0
+offset_right = -1097.0
+offset_bottom = -216.0
+scale = Vector2(2, 2)

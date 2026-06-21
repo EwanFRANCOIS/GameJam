@@ -9,6 +9,7 @@ signal text_queue_completed
 @onready var labelText = $MarginContainer/MarginContainer/HBoxContainer/Text
 @onready var textEnd = $MarginContainer/MarginContainer/HBoxContainer/End
 @onready var AudioDialogue = $AudioDialogue
+@onready var AFFICHAGE_NPC_MARCHAND = $CanvasLayer
 
 var tween: Tween
 var text_queue = []
@@ -22,6 +23,7 @@ enum STATE {
 var current_state = STATE.READY
 
 func _ready():
+	AFFICHAGE_NPC_MARCHAND.visible = false
 	AudioDialogue.process_mode = Node.PROCESS_MODE_ALWAYS
 	hideTextBox()
 
