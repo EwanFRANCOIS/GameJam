@@ -70,3 +70,6 @@ func declencher_dialogue():
 
 func dialogue_boss_mort():
 	TextBox.queue_text("Âme perdue, je ne pourrais jamais suffisamment te remercier d'avoir détourner le brouillard de ma fontaine et d'avoir terrasser la créature qui me faisait face.")
+	TextBox.queue_text("Maintenant qu'elle n'est plus là, les autres abominations devraient se calmer.")
+	TextBox.queue_text("Si tu n'a pas encore parlée à Isabelle, je te conseil d'aller lui parler, elle a vu à qu'elle point tu avait détruit cette créature.")
+	TextBox.queue_text("Je te remercie encore !")

@@ -61,7 +61,7 @@ func dialogue_base():
 		TextBox.queue_text("...")
 		TextBox.queue_text("Oh... Vous n'êtes pas une abomination...")
 		TextBox.queue_text("...")
-		TextBox.queue_text("Je me présente, je suis Charles ! La déesse vous a probablement parlé de moi hehe.")
+		TextBox.queue_text("Je me présente, je suis Isabelle ! La déesse vous a probablement parlé de moi hehe.")
 		TextBox.queue_text("Il faut bien croire que je suis le dernier marchand qui arrive à vivre ici (et encore si on parle pas de toutes les créatures dans le coin)")
 		TextBox.queue_text("Personne ne connait son nom, la seule chose que je sais sur elle, c'est qu'elle a perdu ses pouvoirs d'autant et qu'elle recherche une âme 'pure'.")
 		TextBox.queue_text("Qui sait ce qu'elle veut réellement.")
