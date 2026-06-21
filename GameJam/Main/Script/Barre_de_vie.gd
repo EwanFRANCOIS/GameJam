@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var DEATH_SCREEN = $"../../DEATH_SCREEN"
+
 var pv_max = 5
 var pv = pv_max
 var invincible = false
@@ -33,7 +35,10 @@ func prendre_degats():
 		return
 
 	pv -= 1
-
+	
+	if (pv <= 0):
+		death()
+	
 	# mise à jour visuelle
 	eaux[pv].visible = false
 	bulles[pv].visible = false
@@ -42,3 +47,9 @@ func prendre_degats():
 	invincible = true
 	await get_tree().create_timer(2.0).timeout
 	invincible = false
+
+func death():
+	get_tree().paused = true
+	BgmMenu.stop()
+	WindSoundAmbiant.stop()
+	DEATH_SCREEN.visible = true

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cclkc8l08hv5w"]
+
+[ext_resource type="Script" uid="uid://bksobdu3im4de" path="res://Main/Script/death_screen.gd" id="1_4bdqf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2cim"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bdqf"]
+bg_color = Color(0, 0.5294118, 0.6666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.4)
+
+[node name="DEATH_SCREEN" type="CanvasLayer" unique_id=18151616]
+script = ExtResource("1_4bdqf")
+
+[node name="Panel" type="Panel" parent="." unique_id=997281438]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v2cim")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1281362183]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -156.0
+offset_right = 67.0
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "VOUS ÊTES MORT"
+
+[node name="Button_Retour_Menu" type="Button" parent="Panel" unique_id=1150994947]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -58.0
+offset_right = 114.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4bdqf")
+text = "RETOURNER AU MENU"
+
+[connection signal="pressed" from="Panel/Button_Retour_Menu" to="." method="_on_button_retour_menu_pressed"]

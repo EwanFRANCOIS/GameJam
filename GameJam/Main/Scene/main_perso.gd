@@ -251,6 +251,7 @@ func prendre_degats():
 		
 		# On réduit le nombre de pv
 		owner.get_node("Barre_de_vie/Barre_de_vie").prendre_degats()
+		
 		# Animation quand on prend des dégats
 		for i in range(4):
 			$AnimatedSprite2D.modulate = Color(1,0,0)
@@ -260,7 +261,7 @@ func prendre_degats():
 		
 		await get_tree().create_timer(1).timeout
 		peutPrendreDegatsCooldown = true
-	
+
 func _physics_process(delta: float) -> void:
 	# Dash cooldown
 	if inCooldown_dash:

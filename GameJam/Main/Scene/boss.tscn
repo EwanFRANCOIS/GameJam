@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ejbpy0fbnvsb"]
 
 [ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://Main/Script/boss.gd" id="1_u3jhw"]
-[ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="2_j5g6d"]
 [ext_resource type="PackedScene" uid="uid://ung22ovgqukk" path="res://Main/Scene/bullet.tscn" id="2_rs1ry"]
 [ext_resource type="Script" uid="uid://cfj3shh2dmnfq" path="res://Main/Script/BOSS_OPTIONS.gd" id="3_t0etg"]
+[ext_resource type="Texture2D" uid="uid://dv52nfvxwiurg" path="res://Main/Textures/IMG_0587.png" id="4_t0etg"]
 [ext_resource type="Script" uid="uid://ba4y0cyvfo2q8" path="res://Main/Scene/finit_state_machine.gd" id="4_td8lg"]
 [ext_resource type="Script" uid="uid://byiwe7judy4e5" path="res://Main/Script/idle.gd" id="5_fnanp"]
 [ext_resource type="Script" uid="uid://cqjdvsvonb7g8" path="res://Main/Script/5_leaf.gd" id="6_yrp6c"]
@@ -31,7 +31,7 @@ shape = SubResource("CircleShape2D_5ywdm")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713524164]
 position = Vector2(4.000004, -3.0000038)
 scale = Vector2(0.4911111, 0.48222223)
-texture = ExtResource("2_j5g6d")
+texture = ExtResource("4_t0etg")
 
 [node name="Speed" type="Timer" parent="." unique_id=1649513388]
 wait_time = 0.15
