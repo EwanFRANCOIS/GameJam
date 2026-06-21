@@ -9,6 +9,7 @@ Ce dépôt regroupe le jeu que nous avons développer pour la gamejam du départ
 Nous avons utiliser le moteur de jeu Godot afin de réaliser ce jeu.
 
 Pour plus d'informations sur l'évènement: https://itch.io/jam/pixels-en-provence
+Lien du jeu sur itch.io: https://amadeustdev.itch.io/aix-in-mud
 
 Notre équipe: Ewan FRANCOIS, Nina MATIC-CHARBIT, Audren METERY-DROUIN, Imad SERIDJ
 
