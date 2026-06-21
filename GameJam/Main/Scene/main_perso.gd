@@ -22,6 +22,8 @@ var AllSkills : Array[String] = ["Watering can", "Heal"]
 var inventorySKills : Array[String] = ["Watering can", "Heal"]
 var inCooldownSkills : Array[String] = []
 
+var usingArrosoir = false
+
 func useSkill(skillName : String):
 	if inventorySKills.find(skillName) != -1:
 		if inCooldownSkills.find(skillName) == -1:
@@ -32,8 +34,10 @@ func useSkill(skillName : String):
 			var sprite = $SkillEfect/Sprite2D
 			if skillName == "Watering can":
 				sprite.texture = load("res://Main/Textures/wateringCan.png")
+				usingArrosoir = true
 			await get_tree().create_timer(1.0).timeout # cooldown de 1 seconde
 			sprite.texture = null
+			usingArrosoir = false
 			# Use skill (code)
 			var racineNode = owner
 			
@@ -44,11 +48,23 @@ func useSkill(skillName : String):
 					if distance < 160:
 						life.get_node("Sprite2D").texture = load("res://Main/Textures/Pixelated tree sprites/Pink tree.png")
 						racineNode.get_node("Fogs/FogOverlay").lights.append(life)
+			elif skillName == "Watering can":
+				# idk
+				print("heal")
 			
 			# Cooldown
 			if skillName == "Watering can":
-				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/Skill1")
+				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill1")
 				var cooldown : float = 5.0 # cooldown de 5 secondes
+				skillNode.temps_cooldown_total = cooldown
+				skillNode.lancer_cooldown()
+				for i in range(cooldown):
+					skillNode.get_node("Label").text = str(cooldown-i)
+					await get_tree().create_timer(1.0).timeout
+				skillNode.get_node("Label").text = ""
+			elif skillName == "Heal":
+				var skillNode = racineNode.get_node("SkillUI/CanvasLayer/MarginContainer/HBoxContainer/Skill2")
+				var cooldown : float = 15.0 # cooldown de 10 secondes
 				skillNode.temps_cooldown_total = cooldown
 				skillNode.lancer_cooldown()
 				for i in range(cooldown):
@@ -63,8 +79,6 @@ func checkSkills():
 	# call_deferred execute la fonction en parallele
 	if Input.is_action_pressed("skill1"):
 		useSkill.call_deferred(AllSkills[0])
-	elif Input.is_action_pressed("skill2"):
-		useSkill.call_deferred(AllSkills[1])
 
 func _ready() -> void:
 	pass
@@ -73,22 +87,46 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	pass # Replace with function body.
 
 func animPerso():
-	if Input.is_action_pressed("left"):
+	var isLeft = Input.is_action_pressed("left")
+	var isRight = Input.is_action_pressed("right")
+	var isUp = Input.is_action_pressed("up")
+	var isDown = Input.is_action_pressed("down")
+	
+	if usingArrosoir:
+		if AnimatedSprite.animation != "arrosoir":
+			AnimatedSprite.play("arrosoir")
+	elif isUp and isLeft:
+		if AnimatedSprite.animation != "up-leftW":
+			AnimatedSprite.play("up-leftW")
+			lastMoveDir = "up-left"
+	elif isUp and isRight:
+		if AnimatedSprite.animation != "up-rightW":
+			AnimatedSprite.play("up-rightW")
+			lastMoveDir = "up-right"
+	elif isDown and isLeft:
+		if AnimatedSprite.animation != "down-leftW":
+			AnimatedSprite.play("down-leftW")
+			lastMoveDir = "down-left"
+	elif isDown and isRight:
+		if AnimatedSprite.animation != "down-rightW":
+			AnimatedSprite.play("down-rightW")
+			lastMoveDir = "down-right"
+	elif isLeft:
 		if AnimatedSprite.animation != "leftW":
 			AnimatedSprite.play("leftW")
 			lastMoveDir = "left"
-	elif Input.is_action_pressed("right"):
+	elif isRight:
 		if AnimatedSprite.animation != "rightW":
 			AnimatedSprite.play("rightW")
 			lastMoveDir = "right"
-	elif Input.is_action_pressed("down"):
-		if AnimatedSprite.animation != "downW":
-			AnimatedSprite.play("downW")
-			lastMoveDir = "down"
-	elif Input.is_action_pressed("up"):
+	elif isUp:
 		if AnimatedSprite.animation != "upW":
 			AnimatedSprite.play("upW")
 			lastMoveDir = "up"
+	elif isDown:
+		if AnimatedSprite.animation != "downW":
+			AnimatedSprite.play("downW")
+			lastMoveDir = "down"
 	else:
 		if lastMoveDir == "up":
 			if AnimatedSprite.animation != "idleU":
@@ -99,9 +137,21 @@ func animPerso():
 		elif lastMoveDir == "right":
 			if AnimatedSprite.animation != "idleR":
 				AnimatedSprite.play("idleR")
-		else:
+		elif lastMoveDir == "down":
 			if AnimatedSprite.animation != "idleD":
 				AnimatedSprite.play("idleD")
+		elif lastMoveDir == "down-left":
+			if AnimatedSprite.animation != "idleDLeft":
+				AnimatedSprite.play("idleDLeft")
+		elif lastMoveDir == "down-right":
+			if AnimatedSprite.animation != "idleDRight":
+				AnimatedSprite.play("idleDRight")
+		elif lastMoveDir == "up-left":
+			if AnimatedSprite.animation != "idleULeft":
+				AnimatedSprite.play("idleULeft")
+		elif lastMoveDir == "up-right":
+			if AnimatedSprite.animation != "idleURight":
+				AnimatedSprite.play("idleURight")
 
 func get_input(delta: float):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -127,6 +177,10 @@ func get_input(delta: float):
 		velocity = input_direction * dashSpeed
 	else:
 		velocity = input_direction * speed
+	
+	# No movement when using skill1
+	if usingArrosoir == true:
+		velocity = Vector2.ZERO
 
 var lastColorIndexDashEffect = 0
 func spawnDashEffect() -> void:
@@ -169,6 +223,17 @@ func dashEffect(delta) -> void:
 				lastColorIndexDashEffect = 1
 			spawnDashEffect()
 			ghost_timer = ghost_interval
+
+func orderSprite():
+	var list = [owner.get_node("Map/Fountain")]
+	for nature in owner.get_node("NatureLife").get_children():
+		list.append(nature)
+	
+	for objet in list:
+		if objet.global_position.y < global_position.y:
+			objet.get_node("Sprite2D").z_index = 0
+		else:
+			objet.get_node("Sprite2D").z_index = 2
 	
 func _physics_process(delta: float) -> void:
 	# Dash cooldown
@@ -185,5 +250,7 @@ func _physics_process(delta: float) -> void:
 	dashEffect(delta)
 	# Skills
 	checkSkills()
+	# Sprite ordering
+	orderSprite()
 	# Movement
 	move_and_slide()

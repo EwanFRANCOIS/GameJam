@@ -12,9 +12,9 @@ void fragment() {
 	// Called for every pixel the material is visible on.
 	vec2 noise_uv = (UV * grass_details);
 	float noise_value = texture(noise_texture, noise_uv).r;
-	vec3 color_A = vec3(34.0, 149.0, 13.0) / 255.0;  // Vert clair
-    vec3 color_B = vec3(12.0, 72.0, 3.0) / 255.0;   // Vert foncé
-    
+	vec3 color_A = vec3(120.0, 120.0, 120.0) / 255.0;  // Gris clair
+    vec3 color_B = vec3(58.0, 58.0, 58.0) / 255.0;   // Gris foncé
+	
     // 2. Mixer les deux couleurs selon la noise_value (qui est entre 0.0 et 1.0)
     // Si noise_value vaut 0.0 -> color_A
     // Si noise_value vaut 1.0 -> color_B
