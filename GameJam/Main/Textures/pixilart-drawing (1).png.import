@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drknpvarl5gic"
-path="res://.godot/imported/GoddessWater.png-ac3611b749d51611557c66ed2a468fc8.ctex"
+uid="uid://b5egf38bm14eq"
+path="res://.godot/imported/pixilart-drawing (1).png-ffe156a439a4ca9fa7131b7805463dd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main/Textures/GoddessWater.png"
-dest_files=["res://.godot/imported/GoddessWater.png-ac3611b749d51611557c66ed2a468fc8.ctex"]
+source_file="res://Main/Textures/pixilart-drawing (1).png"
+dest_files=["res://.godot/imported/pixilart-drawing (1).png-ffe156a439a4ca9fa7131b7805463dd7.ctex"]
 
 [params]
 

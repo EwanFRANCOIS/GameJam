@@ -14,12 +14,13 @@
 [ext_resource type="Script" uid="uid://c6coyqgvjnqn7" path="res://Main/Scene/dash_effect.gd" id="6_yma8a"]
 [ext_resource type="Texture2D" uid="uid://di4tml1rxlil7" path="res://Main/Textures/SpriteAnim/front 5.png" id="7_h1sp0"]
 [ext_resource type="Texture2D" uid="uid://dtytpeudh7uwm" path="res://Main/Textures/SpriteAnim/left front 5.png" id="7_hncav"]
+[ext_resource type="PackedScene" uid="uid://c4n0ipmt4kbpt" path="res://Main/Scene/GoddessWater.tscn" id="7_apvie"]
 [ext_resource type="Texture2D" uid="uid://63o7jqh4tstd" path="res://Main/Textures/SpriteAnim/left front 6.png" id="8_0071y"]
 [ext_resource type="PackedScene" uid="uid://ejbpy0fbnvsb" path="res://Main/Scene/boss.tscn" id="8_gg5i3"]
 [ext_resource type="Texture2D" uid="uid://b83nye0c2q3ic" path="res://Main/Textures/SpriteAnim/front 6.png" id="8_ui4sl"]
 [ext_resource type="Texture2D" uid="uid://q4lp8vro4hs5" path="res://Main/Textures/SpriteAnim/left front 7.png" id="9_2j763"]
 [ext_resource type="Script" uid="uid://dm7yulvs581f0" path="res://Main/Scene/monster_template.gd" id="9_3qne0"]
-[ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3"]
+[ext_resource type="PackedScene" uid="uid://dj378swravi1j" path="res://Main/Scene/pause_menu.tscn" id="9_gg5i3_pause"]
 [ext_resource type="Texture2D" uid="uid://bqvp7g5sk4pr6" path="res://Main/Textures/SpriteAnim/front 7.png" id="9_h30id"]
 [ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="9_i6gkg"]
 [ext_resource type="Texture2D" uid="uid://b3jix62etoye3" path="res://Main/Textures/SpriteAnim/front 8.png" id="10_5kuux"]
@@ -43,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://bbumbwe4n8hsi" path="res://Main/Textures/SpriteAnim/back 4.png" id="16_0qsp8"]
 [ext_resource type="Texture2D" uid="uid://c4dnno1gf70i" path="res://Main/Textures/SpriteAnim/right front 6.png" id="16_6ff8n"]
 [ext_resource type="Texture2D" uid="uid://dtuc3xiv51ofx" path="res://Main/Textures/SpriteAnim/left 4.png" id="16_sxawy"]
+[ext_resource type="PackedScene" uid="uid://d3iibxnpxpsbe" path="res://Main/Scene/NPC_MARCHAND.tscn" id="16_marchand"]
 [ext_resource type="Texture2D" uid="uid://df6xpc3xt202p" path="res://Main/Textures/SpriteAnim/back 5.png" id="17_2l12e"]
 [ext_resource type="Texture2D" uid="uid://cwyptdii44dr0" path="res://Main/Textures/SpriteAnim/right front 7.png" id="17_5j6pt"]
 [ext_resource type="Texture2D" uid="uid://bwgairuntpqtt" path="res://Main/Textures/SpriteAnim/left 5.png" id="17_hiam3"]
@@ -50,7 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://0r5k8kvecx1s" path="res://Main/Textures/SpriteAnim/right front 8.png" id="18_4f08h"]
 [ext_resource type="Texture2D" uid="uid://dnyd0a35euhri" path="res://Main/Textures/SpriteAnim/back 6.png" id="18_20mkn"]
 [ext_resource type="Texture2D" uid="uid://b7u0atgpgls07" path="res://Main/Textures/SpriteAnim/left 6.png" id="18_dtvd6"]
-[ext_resource type="Script" uid="uid://bkyxtcwka0eq7" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
+[ext_resource type="Script" path="res://Main/Scene/texture_progress_bar.gd" id="18_ebisl"]
 [ext_resource type="Texture2D" uid="uid://bdclvn8w3i2r" path="res://Main/Textures/SpriteAnim/left 7.png" id="19_ft8o0"]
 [ext_resource type="Texture2D" uid="uid://bwrsppuk185xi" path="res://Main/Textures/SpriteAnim/back 7.png" id="19_xx708"]
 [ext_resource type="Texture2D" uid="uid://cfkxk7yqxjhfs" path="res://Main/Textures/SpriteAnim/left 8.png" id="20_ubr65"]
@@ -1089,11 +1091,10 @@ rotation = -1.5862653
 scale = Vector2(5.6076965, 15.877929)
 shape = SubResource("RectangleShape2D_qxr7q")
 
-[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
+[node name="NPC_GODDESS" parent="Map/Fountain" unique_id=828316896 instance=ExtResource("7_apvie")]
 visible = false
-
-[node name="Boss" parent="." unique_id=1258479015 instance=ExtResource("8_gg5i3")]
-position = Vector2(2087, -465)
+position = Vector2(-2.906, -82.25)
+scale = Vector2(-0.219, 0.231)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
@@ -1242,5 +1243,16 @@ layer = 2
 [node name="Barre_de_vie" parent="Barre_de_vie" unique_id=2119586583 instance=ExtResource("15_sepy4")]
 z_index = 10
 position = Vector2(-24, -21)
+
+[node name="NPC_MARCHAND" parent="." unique_id=231301137 instance=ExtResource("16_li0qw")]
+position = Vector2(1016, 476)
+scale = Vector2(0.15, 0.15)
+
+[node name="PauseMenu" parent="." unique_id=1982010977 instance=ExtResource("9_gg5i3")]
+layer = 100
+visible = false
+
+[node name="Boss" parent="." unique_id=398423175 instance=ExtResource("8_gg5i3")]
+position = Vector2(2137, -487)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]

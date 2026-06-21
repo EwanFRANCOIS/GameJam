@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cckb3o14s5avi" path="res://Main/Script/text_box.gd" id="1_e32u6"]
 [ext_resource type="AudioStream" uid="uid://4fvyjt2qau4g" path="res://Main/Audio/SFX/freesound_community-pixel-sound-effect-3-82880.mp3" id="2_oii6i"]
+[ext_resource type="Texture2D" uid="uid://d10xjqwd17od4" path="res://Main/Textures/IMG_0585.png" id="3_1cvn4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xsc4h"]
 bg_color = Color(0, 0, 0, 1)
@@ -12,7 +13,8 @@ border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [node name="TextBox" type="CanvasLayer" unique_id=2139996017]
-layer = 3
+process_mode = 3
+layer = 30
 script = ExtResource("1_e32u6")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2044310923]
@@ -67,6 +69,16 @@ size_flags_vertical = 8
 theme_override_font_sizes/font_size = 30
 text = "v"
 
-[node name="AudioDialogue" type="AudioStreamPlayer2D" parent="." unique_id=1523949204]
+[node name="AudioDialogue" type="AudioStreamPlayer" parent="." unique_id=399734054]
+process_mode = 3
 stream = ExtResource("2_oii6i")
 pitch_scale = 7.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=511159451]
+layer = 20
+visible = false
+
+[node name="NPC_MARCHAND_IMAGE" type="Sprite2D" parent="CanvasLayer" unique_id=1156779389]
+position = Vector2(1001.99994, 341.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_1cvn4")

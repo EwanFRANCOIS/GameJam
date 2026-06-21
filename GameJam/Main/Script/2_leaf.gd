@@ -3,8 +3,8 @@ extends State
 func enter():
 	var AttackSpeed = $"../../Speed"
 	super.enter()
-	owner.alpha = 5
-	AttackSpeed.wait_time = 0.08
+	owner.alpha = 2
+	AttackSpeed.wait_time = 0.06
 
 func transition():
 	if can_transition:

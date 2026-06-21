@@ -3,12 +3,17 @@
 [ext_resource type="Script" uid="uid://bwuondlfsokqc" path="res://Main/Script/boss.gd" id="1_u3jhw"]
 [ext_resource type="Texture2D" uid="uid://di8ywsjexd5hw" path="res://Main/Textures/tmp.png" id="2_j5g6d"]
 [ext_resource type="PackedScene" uid="uid://ung22ovgqukk" path="res://Main/Scene/bullet.tscn" id="2_rs1ry"]
+[ext_resource type="Script" uid="uid://cfj3shh2dmnfq" path="res://Main/Script/BOSS_OPTIONS.gd" id="3_t0etg"]
 [ext_resource type="Script" uid="uid://ba4y0cyvfo2q8" path="res://Main/Scene/finit_state_machine.gd" id="4_td8lg"]
 [ext_resource type="Script" uid="uid://byiwe7judy4e5" path="res://Main/Script/idle.gd" id="5_fnanp"]
 [ext_resource type="Script" uid="uid://cqjdvsvonb7g8" path="res://Main/Script/5_leaf.gd" id="6_yrp6c"]
 [ext_resource type="Script" uid="uid://c180cxb28yep6" path="res://Main/Script/4_leaf.gd" id="7_6lre0"]
 [ext_resource type="Script" uid="uid://dqb1yk0ixqx8s" path="res://Main/Script/3_leaf.gd" id="8_yrp6c"]
 [ext_resource type="Script" uid="uid://djqkovs54fl0v" path="res://Main/Script/2_leaf.gd" id="9_yrp6c"]
+[ext_resource type="AudioStream" uid="uid://b5logkrjc7jk6" path="res://Main/Audio/BOSS_MUSIC.mp3" id="10_6lre0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ywdm"]
+radius = 614.0008
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5g6d"]
 
@@ -16,6 +21,12 @@
 position = Vector2(500, 300)
 script = ExtResource("1_u3jhw")
 bullet_node = ExtResource("2_rs1ry")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1400677991]
+script = ExtResource("3_t0etg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=693456436]
+shape = SubResource("CircleShape2D_5ywdm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713524164]
 position = Vector2(4.000004, -3.0000038)
@@ -27,13 +38,6 @@ wait_time = 0.15
 
 [node name="Duration" type="Timer" parent="." unique_id=2132557526]
 wait_time = 10.0
-
-[node name="Debug" type="Label" parent="." unique_id=1884638248]
-offset_left = -24.0
-offset_top = -89.0
-offset_right = 26.0
-offset_bottom = -66.0
-text = "Debug"
 
 [node name="PlayerDetection" type="Area2D" parent="." unique_id=1502280011]
 
@@ -59,6 +63,23 @@ script = ExtResource("8_yrp6c")
 
 [node name="2leaf" type="Node2D" parent="FinitStateMachine" unique_id=645575575]
 script = ExtResource("9_yrp6c")
+
+[node name="BOSSMUSIC" type="AudioStreamPlayer2D" parent="." unique_id=839861562]
+process_mode = 3
+stream = ExtResource("10_6lre0")
+volume_db = -15.0
+
+[node name="camera_Boss" type="Camera2D" parent="." unique_id=1681158160]
+zoom = Vector2(2, 2)
+
+[node name="HP_BAR" type="ProgressBar" parent="." unique_id=350362950]
+modulate = Color(1, 0, 0, 1)
+visibility_layer = 524288
+offset_left = -110.0
+offset_top = -92.0
+offset_right = 120.0
+offset_bottom = -65.0
+value = 100.0
 
 [connection signal="timeout" from="Speed" to="." method="_on_speed_timeout"]
 [connection signal="body_entered" from="PlayerDetection" to="FinitStateMachine/Idle" method="_on_player_entered"]

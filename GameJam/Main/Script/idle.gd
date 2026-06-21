@@ -11,5 +11,8 @@ func _on_player_entered(body: Node2D) -> void:
 	player_entered = true
 
 func transition():
+	if (TextBox.current_state != TextBox.STATE.READY):
+		return
+	
 	if player_entered:
 		get_parent().change_state("5leaf")
