@@ -16,7 +16,7 @@ var inCooldown_dash = false
 var cooldownDash = .7
 var cooldownDash_timer = 0.0
 
-var lastMoveDir = ""
+var lastMoveDir = "up"
 
 var AllSkills : Array[String] = ["Watering can", "Heal"]
 var inventorySKills : Array[String] = ["Watering can", "Heal"]
@@ -24,13 +24,15 @@ var inCooldownSkills : Array[String] = []
 
 var usingArrosoir = false
 
+@export var unlockedSKills = false
+
 func useSkill(skillName : String):
 	if inventorySKills.find(skillName) != -1:
 		if inCooldownSkills.find(skillName) == -1:
 			# We own the skill and it's not in cooldown
 			# Add skill to cooldown
 			inCooldownSkills.append(skillName)
-			attaquerBoss()
+			
 			# Use skill (icon)
 			var sprite = $SkillEfect/Sprite2D
 			if skillName == "Watering can":
@@ -43,6 +45,8 @@ func useSkill(skillName : String):
 			var racineNode = owner
 			
 			if skillName == "Watering can":
+				attaquerBoss()
+				
 				var natureLife = racineNode.get_node("NatureLife")
 				for life : StaticBody2D in natureLife.get_children():
 					var distance = life.get_node("CollisionShape2D").global_position.distance_to(global_position)
@@ -65,9 +69,15 @@ func useSkill(skillName : String):
 			inCooldownSkills.remove_at(inCooldownSkills.find(skillName))
 
 func checkSkills():
-	# call_deferred execute la fonction en parallele
-	if Input.is_action_pressed("skill1"):
-		useSkill.call_deferred(AllSkills[0])
+	if unlockedSKills == true:
+		# afficher les skill
+		owner.get_node("SkillUI/CanvasLayer").show()
+		# call_deferred execute la fonction en parallele
+		if Input.is_action_pressed("skill1"):
+			useSkill.call_deferred(AllSkills[0])
+	else:
+		# On cache les skills
+		owner.get_node("SkillUI/CanvasLayer").hide()
 
 func _ready() -> void:
 	pass
@@ -78,7 +88,9 @@ func attaquerBoss():
 	
 	if (BOSS):
 		if (BOSS.has_method("recevoir_Dmg")):
-			BOSS.recevoir_Dmg(10)
+			var distance = BOSS.global_position.distance_to(global_position)
+			if distance < 270:
+				BOSS.recevoir_Dmg(10)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	pass # Replace with function body.
@@ -231,6 +243,23 @@ func orderSprite():
 			objet.get_node("Sprite2D").z_index = 0
 		else:
 			objet.get_node("Sprite2D").z_index = 2
+
+var peutPrendreDegatsCooldown = true
+func prendre_degats():
+	if peutPrendreDegatsCooldown:
+		peutPrendreDegatsCooldown = false
+		
+		# On réduit le nombre de pv
+		owner.get_node("Barre_de_vie/Barre_de_vie").prendre_degats()
+		# Animation quand on prend des dégats
+		for i in range(4):
+			$AnimatedSprite2D.modulate = Color(1,0,0)
+			await get_tree().create_timer(0.125).timeout
+			$AnimatedSprite2D.modulate = Color(1,1,1)
+			await get_tree().create_timer(0.125).timeout
+		
+		await get_tree().create_timer(1).timeout
+		peutPrendreDegatsCooldown = true
 	
 func _physics_process(delta: float) -> void:
 	# Dash cooldown

@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dn5do3pcy024p" path="res://Main/Textures/Deesse.png" id="1_fvbq4"]
 [ext_resource type="Script" uid="uid://xv2kkhslon00" path="res://Main/Script/DEESSE_DIALOGUE.gd" id="2_vb5yx"]
 [ext_resource type="PackedScene" uid="uid://cfbxg7du34b8q" path="res://Main/Scene/affichage_touche_f.tscn" id="3_vb5yx"]
+[ext_resource type="AudioStream" uid="uid://ck6n2ml3gp163" path="res://Main/Audio/lightyeartraxx-kim-lightyear-dolls-and-candys-301112.mp3" id="4_a86fe"]
+[ext_resource type="AudioStream" uid="uid://b8qn2bbmcbvgi" path="res://Main/Audio/古き剣 2 フリーBGM DOVA SYNDROME OFFICIAL YouTube CHANNEL.mp3" id="5_debhv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xubx3"]
 radius = 790.50006
@@ -36,3 +38,13 @@ offset_top = -272.0
 offset_right = -1097.0
 offset_bottom = -216.0
 scale = Vector2(2, 2)
+
+[node name="deesseSad" type="AudioStreamPlayer2D" parent="." unique_id=1602421668]
+process_mode = 3
+stream = ExtResource("4_a86fe")
+volume_db = -10.0
+
+[node name="deesseHappy" type="AudioStreamPlayer2D" parent="." unique_id=1083002121]
+process_mode = 3
+stream = ExtResource("5_debhv")
+volume_db = -10.0

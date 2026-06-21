@@ -29,6 +29,7 @@ func _ready():
 		if (camera_MARCHAND.enabled):
 			camera_MARCHAND.enabled = false
 			get_node("/root/Scene/MainPerso/Camera2D").enabled = true
+			get_node("/root/Scene/MainPerso").unlockedSKills = true
 			get_node("/root/Scene/MainPerso/Camera2D").make_current()
 			TextBox.AFFICHAGE_NPC_MARCHAND.visible = false)
 
@@ -58,7 +59,7 @@ func dialogue_base():
 		TextBox.queue_text("...")
 		TextBox.queue_text("...")
 		TextBox.queue_text("...")
-		TextBox.queue_text("Oh... Vous n'êtes pas une abonimation...")
+		TextBox.queue_text("Oh... Vous n'êtes pas une abomination...")
 		TextBox.queue_text("...")
 		TextBox.queue_text("Je me présente, je suis Charles ! La déesse vous a probablement parlé de moi hehe.")
 		TextBox.queue_text("Il faut bien croire que je suis le dernier marchand qui arrive à vivre ici (et encore si on parle pas de toutes les créatures dans le coin)")
@@ -72,6 +73,7 @@ func dialogue_base():
 		TextBox.queue_text("Mais j'ai beaucoup d'artefacts ou d'autres objets pour toi. Évidemment, ils ne seront pas gratuits, mais vu tous les propos que la déesse a pu dire sur toi, je me dois de t'offrir cet arrosoir !")
 		TextBox.queue_text("Et si tu veux bien, avant d'accéder à mes articles, j'aimerais bien que tu te débarrasses de la chose en haut pour moi, je ne sais pas me battre et j'ai beaucoup trop peur de ce truc.")
 		TextBox.queue_text("Il est coriace mais je sais que tu vas y arriver, et aussi profite-en pour nettoyer les arbres aux alentours, ça nous enlèvera cette brume horrible !")
+		TextBox.queue_text("[VOUS AVEZ OBTENU: ARROSOIR]")
 
 func dialogue_boss_mort():
 	TextBox.queue_text("Oh, te revoilà !")

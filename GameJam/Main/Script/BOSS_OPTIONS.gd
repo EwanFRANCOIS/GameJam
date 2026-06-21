@@ -48,6 +48,8 @@ func declencherDialogue():
 		TextBox.queue_text("Sache que je suis installé ici depuis bien longtemps.")
 		TextBox.queue_text("Je ne laisserais en aucun cas ma place à une simple vermine comme toi !")
 		
+		get_node("..").fight_started = true
+		
 		var boss = get_node_or_null("../")
 		if (boss and boss.has_node("$../HP_BAR")):
 			boss.get_node("$../HP_BAR").visible = true

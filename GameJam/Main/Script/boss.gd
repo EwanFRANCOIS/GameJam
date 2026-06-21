@@ -9,6 +9,8 @@ var theta: float = 0.0
 
 @export var bullet_node: PackedScene
 
+@export var fight_started = false
+
 func _ready():
 	current_hp = MAX_HP
 	
@@ -48,4 +50,7 @@ func shoot(angle):
 	get_tree().current_scene.call_deferred("add_child", bullet)
 
 func _on_speed_timeout() -> void:
-	shoot(theta)
+	if fight_started:
+		var distance = owner.get_node("MainPerso").global_position.distance_to(global_position)
+		if distance < 600:
+			shoot(theta)

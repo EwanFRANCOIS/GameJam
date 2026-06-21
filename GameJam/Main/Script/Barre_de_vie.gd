@@ -24,7 +24,7 @@ func _ready():
 	# état propre au lancement
 	for i in range(eaux.size()):
 		eaux[i].visible = true
-		bulles[i].visible = false
+		bulles[i].visible = true
 
 
 func prendre_degats():
@@ -36,9 +36,9 @@ func prendre_degats():
 
 	# mise à jour visuelle
 	eaux[pv].visible = false
-	bulles[pv].visible = true
+	bulles[pv].visible = false
 
-	# invincibilité (3 secondes)
+	# invincibilité (2 secondes)
 	invincible = true
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	invincible = false

@@ -56,3 +56,8 @@ func _physics_process(delta: float) -> void:
 		var col = get_slide_collision(i)
 		if col.get_collider() is CharacterBody2D:
 			global_position += col.get_normal() * 1
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body==owner.get_node("MainPerso"):
+		owner.get_node("MainPerso").prendre_degats()

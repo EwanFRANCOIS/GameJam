@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8qn2bbmcbvgi"
+path="res://.godot/imported/古き剣 2 フリーBGM DOVA SYNDROME OFFICIAL YouTube CHANNEL.mp3-584d44ca26b81646e6cd5cfec575dc83.mp3str"
+
+[deps]
+
+source_file="res://Main/Audio/古き剣 2 フリーBGM DOVA SYNDROME OFFICIAL YouTube CHANNEL.mp3"
+dest_files=["res://.godot/imported/古き剣 2 フリーBGM DOVA SYNDROME OFFICIAL YouTube CHANNEL.mp3-584d44ca26b81646e6cd5cfec575dc83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

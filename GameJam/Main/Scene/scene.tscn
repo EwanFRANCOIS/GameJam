@@ -84,6 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://dsa56rxejygk8" path="res://Main/Textures/SpriteAnim/right back 6.png" id="42_fisbs"]
 [ext_resource type="Texture2D" uid="uid://c8y8ifcwdag82" path="res://Main/Textures/SpriteAnim/right back 7.png" id="43_poe4r"]
 [ext_resource type="Texture2D" uid="uid://c6kjcn17vu3if" path="res://Main/Textures/SpriteAnim/right back 8.png" id="44_lhryi"]
+[ext_resource type="Script" uid="uid://d3emb8dk2x64k" path="res://Main/Scene/fountain.gd" id="73_6ff8n"]
 [ext_resource type="Texture2D" uid="uid://bp8mu0ccefurv" path="res://Main/Textures/placeDetruite.png" id="74_tji57"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j0eya"]
@@ -721,6 +722,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxnsx"]
 size = Vector2(65, 67)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ff8n"]
+size = Vector2(85, 88)
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_sepy4"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3qne0"]
@@ -1072,6 +1076,7 @@ shape = SubResource("RectangleShape2D_j0eya")
 
 [node name="Fountain" type="StaticBody2D" parent="Map" unique_id=1264765105]
 position = Vector2(-1, 1)
+script = ExtResource("73_6ff8n")
 metadata/light_radius = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fountain" unique_id=1820571974]
@@ -1093,19 +1098,25 @@ texture = ExtResource("74_tji57")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=526322848]
 
-[node name="MonsterTemplate" type="CharacterBody2D" parent="." unique_id=1006290647]
+[node name="MonsterTemplate" type="CharacterBody2D" parent="Enemies" unique_id=1006290647]
 position = Vector2(394, 714)
 script = ExtResource("9_3qne0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MonsterTemplate" unique_id=796598613]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemies/MonsterTemplate" unique_id=796598613]
 position = Vector2(0.25, -1.25)
 scale = Vector2(0.28666666, 0.2911111)
 sprite_frames = SubResource("SpriteFrames_3qne0")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTemplate" unique_id=1214633411]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/MonsterTemplate" unique_id=1214633411]
 position = Vector2(-0.25, 0.24996948)
 shape = SubResource("RectangleShape2D_rxnsx")
+
+[node name="Area2D" type="Area2D" parent="Enemies/MonsterTemplate" unique_id=123506731]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/MonsterTemplate/Area2D" unique_id=1850897320]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_6ff8n")
 
 [node name="ScreenEffects" type="Node2D" parent="." unique_id=1911445769]
 
@@ -1269,3 +1280,4 @@ visible = false
 position = Vector2(2137, -487)
 
 [connection signal="animation_finished" from="MainPerso/AnimatedSprite2D" to="MainPerso" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Enemies/MonsterTemplate/Area2D" to="Enemies/MonsterTemplate" method="_on_area_2d_body_entered"]
